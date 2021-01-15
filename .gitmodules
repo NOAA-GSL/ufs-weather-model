@@ -1,6 +1,6 @@
 [submodule "FV3"]
 	path = FV3
-	url = https://github.com/NOAA-GSL/fv3atm
+	url = https://github.com/mpagowski/ufs-weather-model
 	branch = gsd/develop-chem
 [submodule "NEMS"]
 	path = NEMS
