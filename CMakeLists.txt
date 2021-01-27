@@ -18,7 +18,8 @@ project(ufs
 list(APPEND CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/cmake)
 list(APPEND CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/CMakeModules/Modules)
 
-set(32BIT           OFF CACHE BOOL "Enable 32BIT (single precision arithmetic in dycore)")
+set(32BIT           ON  CACHE BOOL "Enable 32BIT (single precision arithmetic in dycore)")
+set(DYN32           ON  CACHE BOOL "Enable 32BIT (single precision arithmetic in dycore)")
 set(AVX2            ON  CACHE BOOL "Enable AVX2 instruction set")
 set(SIMDMULTIARCH   OFF CACHE BOOL "Enable multi-target SIMD instruction sets")
 set(CCPP            ON  CACHE BOOL "Enable CCPP")
