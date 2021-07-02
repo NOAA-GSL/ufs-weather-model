@@ -120,7 +120,6 @@ source $PATHTR/NEMS/src/conf/module-setup.sh.inc
 if [[ $MACHINE_ID = wcoss_cray ]]; then
 
   module load xt-lsfhpc
-  module load python/3.6.3
 
   module use /usrx/local/emc_rocoto/modulefiles
   module load rocoto/1.3.0rc2
@@ -133,6 +132,7 @@ if [[ $MACHINE_ID = wcoss_cray ]]; then
   module load ecflow/intel/4.17.0.1
   ECFLOW_START=${ECF_ROOT}/bin/ecflow_start.sh
   ECF_PORT=$(grep $USER /usrx/local/sys/ecflow/assigned_ports.txt | awk '{print $2}')
+  module load python/3.6.3
 
   DISKNM=/gpfs/hps3/emc/nems/noscrub/emc.nemspara/RT
   QUEUE=debug
@@ -232,12 +232,13 @@ elif [[ $MACHINE_ID = hera.* ]]; then
   ROCOTOCOMPLETE=$(which rocotocomplete)
   ROCOTO_SCHEDULER=slurm
 
-  export PATH=/scratch1/NCEPDEV/nems/emc.nemspara/soft/miniconda3/bin:$PATH
-  export PYTHONPATH=/scratch1/NCEPDEV/nems/emc.nemspara/soft/miniconda3/lib/python3.8/site-packages
-  ECFLOW_START=/scratch1/NCEPDEV/nems/emc.nemspara/soft/miniconda3/bin/ecflow_start.sh
+  PYTHONHOME=/scratch1/NCEPDEV/nems/emc.nemspara/soft/miniconda3_new_20210629
+  export PATH=$PYTHONHOME/bin:$PATH
+  export PYTHONPATH=$PYTHONHOME/lib/python3.7/site-packages
+  ECFLOW_START=$PYTHONHOME/bin/ecflow_start.sh
   ECF_PORT=$(( $(id -u) + 1500 ))
 
-  QUEUE=batch
+  QUEUE=debug
   COMPILE_QUEUE=batch
 
   #ACCNR=fv3-cpu
@@ -292,10 +293,10 @@ elif [[ $MACHINE_ID = jet.* ]]; then
 
   QUEUE=batch
   COMPILE_QUEUE=batch
-  ACCNR=hfv3gfs
+  ACCNR=h-nems
   PARTITION=xjet
-  DISKNM=/lfs4/HFIP/hfv3gfs/emc.nemspara/RT
-  dprefix=/lfs4/HFIP/hfv3gfs/$USER
+  DISKNM=/lfs4/HFIP/h-nems/emc.nemspara/RT
+  dprefix=/lfs4/HFIP/h-nems/$USER
   STMP=$dprefix/RT_BASELINE
   PTMP=$dprefix/RT_RUNDIRS
 
@@ -310,12 +311,12 @@ elif [[ $MACHINE_ID = cheyenne.* ]]; then
   ECFLOW_START=/glade/p/ral/jntp/tools/miniconda3/4.8.3/envs/ufs-weather-model/bin/ecflow_start.sh
   ECF_PORT=$(( $(id -u) + 1500 ))
 
-  QUEUE=regular
-  COMPILE_QUEUE=regular
+  QUEUE=economy
+  COMPILE_QUEUE=economy
   PARTITION=
   dprefix=/glade/scratch
   DISKNM=/glade/p/ral/jntp/GMTB/ufs-weather-model/RT
-  STMP=/glade/work
+  STMP=$dprefix
   PTMP=$dprefix
   SCHEDULER=pbs
   cp fv3_conf/fv3_qsub.IN_cheyenne fv3_conf/fv3_qsub.IN
@@ -413,15 +414,15 @@ if [[ $TESTS_FILE =~ '35d' ]]; then
   TEST_35D=true
 fi
 
-BL_DATE=20210330
+BL_DATE=20210616
 if [[ $MACHINE_ID = hera.* ]] || [[ $MACHINE_ID = orion.* ]] || [[ $MACHINE_ID = cheyenne.* ]] || [[ $MACHINE_ID = gaea.* ]] || [[ $MACHINE_ID = jet.* ]]; then
   RTPWD=${RTPWD:-$DISKNM/NEMSfv3gfs/develop-${BL_DATE}/${RT_COMPILER^^}}
 else
   RTPWD=${RTPWD:-$DISKNM/NEMSfv3gfs/develop-${BL_DATE}}
 fi
 
-INPUTDATA_ROOT=${INPUTDATA_ROOT:-$DISKNM/NEMSfv3gfs/input-data-20210324}
-INPUTDATA_ROOT_WW3=${INPUTDATA_ROOT}/WW3_input_data_20201220
+INPUTDATA_ROOT=${INPUTDATA_ROOT:-$DISKNM/NEMSfv3gfs/input-data-20210614}
+INPUTDATA_ROOT_WW3=${INPUTDATA_ROOT}/WW3_input_data_20210503
 INPUTDATA_ROOT_BMIC=${INPUTDATA_ROOT_BMIC:-$DISKNM/NEMSfv3gfs/BM_IC-20210212}
 
 shift $((OPTIND-1))
@@ -558,7 +559,7 @@ EOF
   elif [[ $MACHINE_ID = gaea.* ]]; then
     QUEUE=normal
   elif [[ $MACHINE_ID = cheyenne.* ]]; then
-    QUEUE=regular
+    QUEUE=economy
   else
     die "ecFlow is not supported on this machine $MACHINE_ID"
   fi
