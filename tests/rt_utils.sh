@@ -418,7 +418,7 @@ rocoto_create_compile_task() {
   fi
 
   cat << EOF >> $ROCOTO_XML
-  <task name="compile_${COMPILE_NR}" maxtries="3">
+  <task name="compile_${COMPILE_NR}" maxtries="${ROCOTO_COMPILE_MAXTRIES:-3}">
     $DEP_STRING
     <command>&PATHRT;/run_compile.sh &PATHRT; &RUNDIR_ROOT; "${MAKE_OPT}" ${COMPILE_NR}</command>
     <jobname>compile_${COMPILE_NR}</jobname>
@@ -455,7 +455,7 @@ rocoto_create_run_task() {
   fi
 
   cat << EOF >> $ROCOTO_XML
-    <task name="${TEST_NAME}${RT_SUFFIX}" maxtries="1">
+    <task name="${TEST_NAME}${RT_SUFFIX}" maxtries="${ROCOTO_TEST_MAXTRIES:-3}">
       <dependency> $DEP_STRING </dependency>
       <command>&PATHRT;/run_test.sh &PATHRT; &RUNDIR_ROOT; ${TEST_NAME} ${TEST_NR} ${COMPILE_NR} </command>
       <jobname>${TEST_NAME}${RT_SUFFIX}</jobname>
@@ -478,22 +478,44 @@ rocoto_kill() {
    done
 }
 
-rocoto_run() {
-
-  state="Active"
-  while [[ $state != "Done" ]]
-  do
+rocoto_step() {
+    # Run one iteration of rocotorun and rocotostat.
     $ROCOTORUN -v 10 -w $ROCOTO_XML -d $ROCOTO_DB
-    sleep 10
+    sleep 1
+    state="Active"
     state=$($ROCOTOSTAT -w $ROCOTO_XML -d $ROCOTO_DB -s | grep 197001010000 | awk -F" " '{print $2}')
     dead_compile=$($ROCOTOSTAT -w $ROCOTO_XML -d $ROCOTO_DB | grep compile_ | grep DEAD | head -1 | awk -F" " '{print $2}')
     if [[ ! -z ${dead_compile} ]]; then
       echo "y" | ${ROCOTOCOMPLETE} -w $ROCOTO_XML -d $ROCOTO_DB -m ${dead_compile}_tasks
       ${ROCOTOCOMPLETE} -w $ROCOTO_XML -d $ROCOTO_DB -t ${dead_compile}
     fi
-    sleep 20
-  done
+}
 
+rocoto_run() {
+  # Run the rocoto workflow until it is complete
+  local max_aborts=7
+  local naptime=20
+  local aborts=0
+  state="Active"
+  while [[ $state != "Done" ]]; do
+      # Run one iteration of rocotorun and rocotostat.  Use an
+      # exponential backoff algorithm to handle temporary system
+      # failures breaking rocotorun or rocotostat.
+      aborts=0
+      while ( ! rocoto_step ) && (( aborts<max_aborts )) ; do
+          aborts=$(( aborts+1 ))
+          sleep $(( naptime * 2**((aborts-1)%5) * RANDOM/32767 ))
+      done
+      if (( aborts>=max_aborts )) ; then
+          set +x
+          echo "The rocoto workflow commands aborted $max_aborts times."
+          echo "There may be something wrong with the $( hostname ) node or the batch system."
+          echo "I'm giving up. Sorry."
+          set -x
+          return 2
+      fi
+      sleep $naptime
+  done
 }
 
 
