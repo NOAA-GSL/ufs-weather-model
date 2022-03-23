@@ -493,10 +493,10 @@ rocoto_step() {
 
 rocoto_run() {
   # Run the rocoto workflow until it is complete
-  local naptime=20
+  local naptime=60
   local step_attempts=0
-  local max_step_attempts=10
-  local result=0
+  local max_step_attempts=7
+   local result=0
   state="Active"
   while [[ $state != "Done" ]]; do
       # Run one iteration of rocotorun and rocotostat.  Use an
@@ -522,7 +522,7 @@ rocoto_run() {
               set -x
               return 2
           fi
-          sleep $(( naptime * 2**((step_attempts-1)%5) * RANDOM/32767 ))
+          sleep $(( naptime * 2**((step_attempts-1)%4) * RANDOM/32767 ))
       done
       sleep $naptime
   done
