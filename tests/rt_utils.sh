@@ -482,7 +482,7 @@ rocoto_step() {
     # Run one iteration of rocotorun and rocotostat.
     $ROCOTORUN -v 10 -w $ROCOTO_XML -d $ROCOTO_DB
     sleep 1
-    state="Active"
+    #   Is it done?
     state=$($ROCOTOSTAT -w $ROCOTO_XML -d $ROCOTO_DB -s | grep 197001010000 | awk -F" " '{print $2}')
     dead_compile=$($ROCOTOSTAT -w $ROCOTO_XML -d $ROCOTO_DB | grep compile_ | grep DEAD | head -1 | awk -F" " '{print $2}')
     if [[ ! -z ${dead_compile} ]]; then
@@ -493,27 +493,37 @@ rocoto_step() {
 
 rocoto_run() {
   # Run the rocoto workflow until it is complete
-  local max_aborts=7
   local naptime=20
-  local aborts=0
+  local step_attempts=0
+  local max_step_attempts=10
+  local result=0
   state="Active"
   while [[ $state != "Done" ]]; do
       # Run one iteration of rocotorun and rocotostat.  Use an
       # exponential backoff algorithm to handle temporary system
       # failures breaking rocotorun or rocotostat.
-      aborts=0
-      while ( ! rocoto_step ) && (( aborts<max_aborts )) ; do
-          aborts=$(( aborts+1 ))
-          sleep $(( naptime * 2**((aborts-1)%5) * RANDOM/32767 ))
+      for step_attempts in $( seq 1 $max_step_attempts ) ; do
+          set +e
+          rocoto_step
+          result=$?
+          set -e
+          if [[ "$state" == Done ]] ; then
+              set +x
+              echo "Rocoto workflow has completed."
+              set -x
+              return 0
+          elif [[ $result == 0 ]] ; then
+              break # rocoto_step succeeded
+          elif (( step_attempts>=max_step_attempts )) ; then
+              set +x
+              echo "The rocoto workflow commands aborted $step_attempts times."
+              echo "There may be something wrong with the $( hostname ) node or the batch system."
+              echo "I'm giving up. Sorry."
+              set -x
+              return 2
+          fi
+          sleep $(( naptime * 2**((step_attempts-1)%5) * RANDOM/32767 ))
       done
-      if (( aborts>=max_aborts )) ; then
-          set +x
-          echo "The rocoto workflow commands aborted $max_aborts times."
-          echo "There may be something wrong with the $( hostname ) node or the batch system."
-          echo "I'm giving up. Sorry."
-          set -x
-          return 2
-      fi
       sleep $naptime
   done
 }
