@@ -32,6 +32,9 @@ export OUTPUT_HISTORY=.true.
 export OUTPUT_GRID=lambert_conformal
 export OUTPUT_FILE="'netcdf'"
 
+export RRFS_SMOKE=.true.
+export SEAS_OPT=0
+
 export IALB=2
 export ICLIQ_SW=2
 export IEMS=2
@@ -92,6 +95,7 @@ export DO_UGWP_V1_OROG_ONLY=.false.
 
 export FV3_RUN=rrfs_warm_run.IN
 export INPUT_NML=rrfs_conus13km_hrrr.nml.IN
-export FIELD_TABLE=field_table_thompson_aero_tke
+export FIELD_TABLE=field_table_thompson_aero_tke_smoke
 export DIAG_TABLE=diag_table_hrrr
 export MODEL_CONFIGURE=model_configure_rrfs_conus13km.IN
+export DIAG_TABLE_ADDITIONAL=diag_additional_rrfs_smoke
