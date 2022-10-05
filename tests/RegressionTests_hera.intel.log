@@ -1,26 +1,26 @@
-Tue Jun 21 22:30:58 UTC 2022
+Wed Oct  5 21:43:11 UTC 2022
 Start Regression test
 
-Compile 001 elapsed time 558 seconds. -DAPP=S2SWA -DCCPP_SUITES=FV3_GFS_v16_coupled_nsstNoahmpUGWPv1,FV3_GFS_v17_coupled_p8 -DMPI=ON -DCMAKE_BUILD_TYPE=Release -DMOM6SOLO=ON
-Compile 002 elapsed time 235 seconds. -DAPP=S2SA -DDEBUG=ON -DCCPP_SUITES=FV3_GFS_v17_coupled_p8 -DMPI=ON -DCMAKE_BUILD_TYPE=Debug -DMOM6SOLO=ON
-Compile 003 elapsed time 573 seconds. -DAPP=ATM -DCCPP_SUITES=FV3_GFS_v16,FV3_GFS_v15_thompson_mynn,FV3_GFS_v17_p8,FV3_GFS_v17_p8_rrtmgp,FV3_GFS_v15_thompson_mynn_lam3km -D32BIT=ON -DMPI=ON -DCMAKE_BUILD_TYPE=Release
-Compile 004 elapsed time 384 seconds. -DAPP=ATM -DCCPP_SUITES=FV3_RAP,FV3_RAP_RRTMGP,FV3_RAP_sfcdiff,FV3_HRRR,FV3_HRRR_smoke,FV3_RRFS_v1beta,FV3_RRFS_v1nssl -D32BIT=ON -DDEBUG=ON -DMPI=ON -DCMAKE_BUILD_TYPE=Debug
-Compile 005 elapsed time 347 seconds. -DAPP=ATM -DCCPP_SUITES=FV3_RAP,FV3_RAP_RRTMGP,FV3_RAP_sfcdiff,FV3_HRRR,FV3_HRRR_smoke,FV3_RRFS_v1beta,FV3_RRFS_v1nssl -D32BIT=ON -DMPI=ON -DCMAKE_BUILD_TYPE=Release
-Compile 006 elapsed time 527 seconds. -DAPP=ATM -DCCPP_SUITES=FV3_GFS_v16_csawmg,FV3_GFS_v16_flake,FV3_GFS_v16_ugwpv1,FV3_GFS_v16_ras,FV3_GFS_v16_thompson,FV3_GFS_v16_noahmp -DMPI=ON -DCMAKE_BUILD_TYPE=Release
-Compile 007 elapsed time 308 seconds. -DAPP=ATM -DCCPP_SUITES=FV3_GFS_v16_fv3wam -D32BIT=ON -DMULTI_GASES=ON -DMPI=ON -DCMAKE_BUILD_TYPE=Release
-Compile 008 elapsed time 181 seconds. -DAPP=ATM -DDEBUG=ON -DCCPP_SUITES=FV3_GFS_v16,FV3_GFS_v16_csawmg,FV3_GFS_v16_flake,FV3_GFS_v16_ugwpv1,FV3_GFS_v16_ras,FV3_GFS_v16_noahmp,FV3_GFS_v16_thompson,FV3_GFS_v15_thompson_mynn,FV3_GFS_v17_p8 -D32BIT=ON -DMPI=ON -DCMAKE_BUILD_TYPE=Debug
-Compile 009 elapsed time 161 seconds. -DAPP=ATM -DDEBUG=ON -DCCPP_SUITES=FV3_RAP,FV3_RAP_cires_ugwp,FV3_RAP_unified_ugwp,FV3_RAP_flake -D32BIT=ON -DMPI=ON -DCMAKE_BUILD_TYPE=Debug
-Compile 010 elapsed time 383 seconds. -DAPP=ATM -DDEBUG=ON -DCCPP_SUITES=FV3_RAP_noah,FV3_RAP_RRTMGP,FV3_RAP_sfcdiff,FV3_RAP_noah_sfcdiff_cires_ugwp,FV3_RRFS_v1beta -D32BIT=ON -DMPI=ON -DCMAKE_BUILD_TYPE=Debug
-Compile 011 elapsed time 154 seconds. -DAPP=ATM -DCCPP_SUITES=FV3_GFS_v16_fv3wam -D32BIT=ON -DMULTI_GASES=ON -DDEBUG=ON -DMPI=ON -DCMAKE_BUILD_TYPE=Debug
-Compile 012 elapsed time 548 seconds. -DAPP=HAFSW -DMOVING_NEST=ON -DCCPP_SUITES=FV3_HAFS_v0_gfdlmp_tedmf,FV3_HAFS_v0_gfdlmp_tedmf_nonsst,FV3_HAFS_v0_thompson_tedmf_gfdlsf -D32BIT=ON -DMPI=ON -DCMAKE_BUILD_TYPE=Release
-Compile 013 elapsed time 687 seconds. -DAPP=HAFS-ALL -DCCPP_SUITES=FV3_HAFS_v0_gfdlmp_tedmf,FV3_HAFS_v0_gfdlmp_tedmf_nonsst -D32BIT=ON -DMPI=ON -DCMAKE_BUILD_TYPE=Release
-Compile 014 elapsed time 187 seconds. -DAPP=NG-GODAS -DMPI=ON -DCMAKE_BUILD_TYPE=Release -DMOM6SOLO=ON
-Compile 015 elapsed time 96 seconds. -DAPP=NG-GODAS -DDEBUG=ON -DMPI=ON -DCMAKE_BUILD_TYPE=Debug -DMOM6SOLO=ON
-Compile 016 elapsed time 771 seconds. -DAPP=ATMW -DCCPP_SUITES=FV3_GFS_v16 -D32BIT=ON -DMPI=ON -DCMAKE_BUILD_TYPE=Release
-Compile 017 elapsed time 727 seconds. -DAPP=ATMAERO -DCCPP_SUITES=FV3_GFS_v16 -DMPI=ON -DCMAKE_BUILD_TYPE=Release
+Compile 001 elapsed time 1045 seconds. -DAPP=S2SWA -DCCPP_SUITES=FV3_GFS_v16_coupled_nsstNoahmpUGWPv1,FV3_GFS_v17_coupled_p8 -DMPI=ON -DCMAKE_BUILD_TYPE=Release -DMOM6SOLO=ON
+Compile 002 elapsed time 504 seconds. -DAPP=S2SA -DDEBUG=ON -DCCPP_SUITES=FV3_GFS_v17_coupled_p8 -DMPI=ON -DCMAKE_BUILD_TYPE=Debug -DMOM6SOLO=ON
+Compile 003 elapsed time 334 seconds. -DAPP=ATM -DCCPP_SUITES=FV3_GFS_v16,FV3_GFS_v15_thompson_mynn,FV3_GFS_v17_p8,FV3_GFS_v17_p8_rrtmgp,FV3_GFS_v15_thompson_mynn_lam3km -D32BIT=ON -DMPI=ON -DCMAKE_BUILD_TYPE=Release
+Compile 004 elapsed time 747 seconds. -DAPP=ATM -DCCPP_SUITES=FV3_RAP,FV3_RAP_RRTMGP,FV3_RAP_sfcdiff,FV3_HRRR,FV3_RRFS_v1beta,FV3_RRFS_v1nssl -D32BIT=ON -DDEBUG=ON -DMPI=ON -DCMAKE_BUILD_TYPE=Debug
+Compile 005 elapsed time 786 seconds. -DAPP=ATM -DCCPP_SUITES=FV3_RAP,FV3_RAP_RRTMGP,FV3_RAP_sfcdiff,FV3_HRRR,FV3_RRFS_v1beta,FV3_RRFS_v1nssl -D32BIT=ON -DMPI=ON -DCMAKE_BUILD_TYPE=Release
+Compile 006 elapsed time 657 seconds. -DAPP=ATM -DCCPP_SUITES=FV3_GFS_v16_csawmg,FV3_GFS_v16_flake,FV3_GFS_v16_ugwpv1,FV3_GFS_v16_ras,FV3_GFS_v16_thompson,FV3_GFS_v16_noahmp -DMPI=ON -DCMAKE_BUILD_TYPE=Release
+Compile 007 elapsed time 784 seconds. -DAPP=ATM -DCCPP_SUITES=FV3_GFS_v16_fv3wam -D32BIT=ON -DMULTI_GASES=ON -DMPI=ON -DCMAKE_BUILD_TYPE=Release
+Compile 008 elapsed time 182 seconds. -DAPP=ATM -DDEBUG=ON -DCCPP_SUITES=FV3_GFS_v16,FV3_GFS_v16_csawmg,FV3_GFS_v16_flake,FV3_GFS_v16_ugwpv1,FV3_GFS_v16_ras,FV3_GFS_v16_noahmp,FV3_GFS_v16_thompson,FV3_GFS_v15_thompson_mynn,FV3_GFS_v17_p8 -D32BIT=ON -DMPI=ON -DCMAKE_BUILD_TYPE=Debug
+Compile 009 elapsed time 192 seconds. -DAPP=ATM -DDEBUG=ON -DCCPP_SUITES=FV3_RAP,FV3_RAP_cires_ugwp,FV3_RAP_unified_ugwp,FV3_RAP_flake -D32BIT=ON -DMPI=ON -DCMAKE_BUILD_TYPE=Debug
+Compile 010 elapsed time 275 seconds. -DAPP=ATM -DDEBUG=ON -DCCPP_SUITES=FV3_RAP_noah,FV3_RAP_RRTMGP,FV3_RAP_sfcdiff,FV3_RAP_noah_sfcdiff_cires_ugwp,FV3_RRFS_v1beta -D32BIT=ON -DMPI=ON -DCMAKE_BUILD_TYPE=Debug
+Compile 011 elapsed time 366 seconds. -DAPP=ATM -DCCPP_SUITES=FV3_GFS_v16_fv3wam -D32BIT=ON -DMULTI_GASES=ON -DDEBUG=ON -DMPI=ON -DCMAKE_BUILD_TYPE=Debug
+Compile 012 elapsed time 519 seconds. -DAPP=HAFSW -DMOVING_NEST=ON -DCCPP_SUITES=FV3_HAFS_v0_gfdlmp_tedmf,FV3_HAFS_v0_gfdlmp_tedmf_nonsst,FV3_HAFS_v0_thompson_tedmf_gfdlsf -D32BIT=ON -DMPI=ON -DCMAKE_BUILD_TYPE=Release
+Compile 013 elapsed time 550 seconds. -DAPP=HAFS-ALL -DCCPP_SUITES=FV3_HAFS_v0_gfdlmp_tedmf,FV3_HAFS_v0_gfdlmp_tedmf_nonsst -D32BIT=ON -DMPI=ON -DCMAKE_BUILD_TYPE=Release
+Compile 014 elapsed time 188 seconds. -DAPP=NG-GODAS -DMPI=ON -DCMAKE_BUILD_TYPE=Release -DMOM6SOLO=ON
+Compile 015 elapsed time 301 seconds. -DAPP=NG-GODAS -DDEBUG=ON -DMPI=ON -DCMAKE_BUILD_TYPE=Debug -DMOM6SOLO=ON
+Compile 016 elapsed time 535 seconds. -DAPP=ATMW -DCCPP_SUITES=FV3_GFS_v16 -D32BIT=ON -DMPI=ON -DCMAKE_BUILD_TYPE=Release
+Compile 017 elapsed time 341 seconds. -DAPP=ATMAERO -DCCPP_SUITES=FV3_GFS_v16 -DMPI=ON -DCMAKE_BUILD_TYPE=Release
 
-baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20220613/INTEL/cpld_control_p8
-working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/FV3_RT/rt_173298/cpld_control_p8
+baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20221005/INTEL/cpld_control_p8
+working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/SD_RT/rt_31266/cpld_control_p8
 Checking test 001 cpld_control_p8 results ....
  Comparing sfcf021.tile1.nc .........OK
  Comparing sfcf021.tile2.nc .........OK
@@ -86,14 +86,14 @@ Checking test 001 cpld_control_p8 results ....
  Comparing 20210323.060000.out_pnt.points .........OK
  Comparing 20210323.060000.restart.glo_1deg .........OK
 
-  0: The total amount of wall time                        = 353.129936
-  0: The maximum resident set size (KB)                   = 1132472
+  0: The total amount of wall time                        = 353.857770
+  0: The maximum resident set size (KB)                   = 1130236
 
 Test 001 cpld_control_p8 PASS
 
 
-baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20220613/INTEL/cpld_control_p8
-working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/FV3_RT/rt_173298/cpld_2threads_p8
+baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20221005/INTEL/cpld_control_p8
+working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/SD_RT/rt_31266/cpld_2threads_p8
 Checking test 002 cpld_2threads_p8 results ....
  Comparing sfcf024.tile1.nc .........OK
  Comparing sfcf024.tile2.nc .........OK
@@ -147,14 +147,14 @@ Checking test 002 cpld_2threads_p8 results ....
  Comparing 20210323.060000.out_pnt.points .........OK
  Comparing 20210323.060000.restart.glo_1deg .........OK
 
-  0: The total amount of wall time                        = 434.712562
-  0: The maximum resident set size (KB)                   = 1714188
+  0: The total amount of wall time                        = 437.886170
+  0: The maximum resident set size (KB)                   = 1712340
 
 Test 002 cpld_2threads_p8 PASS
 
 
-baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20220613/INTEL/cpld_control_p8
-working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/FV3_RT/rt_173298/cpld_decomp_p8
+baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20221005/INTEL/cpld_control_p8
+working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/SD_RT/rt_31266/cpld_decomp_p8
 Checking test 003 cpld_decomp_p8 results ....
  Comparing sfcf024.tile1.nc .........OK
  Comparing sfcf024.tile2.nc .........OK
@@ -208,14 +208,14 @@ Checking test 003 cpld_decomp_p8 results ....
  Comparing 20210323.060000.out_pnt.points .........OK
  Comparing 20210323.060000.restart.glo_1deg .........OK
 
-  0: The total amount of wall time                        = 350.419106
-  0: The maximum resident set size (KB)                   = 1127356
+  0: The total amount of wall time                        = 352.530438
+  0: The maximum resident set size (KB)                   = 1129280
 
 Test 003 cpld_decomp_p8 PASS
 
 
-baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20220613/INTEL/cpld_control_p8
-working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/FV3_RT/rt_173298/cpld_mpi_p8
+baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20221005/INTEL/cpld_control_p8
+working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/SD_RT/rt_31266/cpld_mpi_p8
 Checking test 004 cpld_mpi_p8 results ....
  Comparing sfcf024.tile1.nc .........OK
  Comparing sfcf024.tile2.nc .........OK
@@ -269,14 +269,14 @@ Checking test 004 cpld_mpi_p8 results ....
  Comparing 20210323.060000.out_pnt.points .........OK
  Comparing 20210323.060000.restart.glo_1deg .........OK
 
-  0: The total amount of wall time                        = 292.554899
-  0: The maximum resident set size (KB)                   = 1044112
+  0: The total amount of wall time                        = 296.829456
+  0: The maximum resident set size (KB)                   = 1041076
 
 Test 004 cpld_mpi_p8 PASS
 
 
-baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20220613/INTEL/cpld_bmark_p8
-working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/FV3_RT/rt_173298/cpld_bmark_p8
+baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20221005/INTEL/cpld_bmark_p8
+working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/SD_RT/rt_31266/cpld_bmark_p8
 Checking test 005 cpld_bmark_p8 results ....
  Comparing sfcf006.nc .........OK
  Comparing atmf006.nc .........OK
@@ -322,14 +322,14 @@ Checking test 005 cpld_bmark_p8 results ....
  Comparing RESTART/iced.2013-04-01-21600.nc .........OK
  Comparing RESTART/ufs.cpld.cpl.r.2013-04-01-21600.nc .........OK
 
-  0: The total amount of wall time                        = 1069.252731
-  0: The maximum resident set size (KB)                   = 2844608
+  0: The total amount of wall time                        = 1126.206890
+  0: The maximum resident set size (KB)                   = 2839944
 
 Test 005 cpld_bmark_p8 PASS
 
 
-baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20220613/INTEL/cpld_control_c96_p8
-working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/FV3_RT/rt_173298/cpld_control_c96_p8
+baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20221005/INTEL/cpld_control_c96_p8
+working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/SD_RT/rt_31266/cpld_control_c96_p8
 Checking test 006 cpld_control_c96_p8 results ....
  Comparing sfcf021.tile1.nc .........OK
  Comparing sfcf021.tile2.nc .........OK
@@ -392,14 +392,14 @@ Checking test 006 cpld_control_c96_p8 results ....
  Comparing RESTART/iced.2021-03-23-21600.nc .........OK
  Comparing RESTART/ufs.cpld.cpl.r.2021-03-23-21600.nc .........OK
 
-  0: The total amount of wall time                        = 345.507607
-  0: The maximum resident set size (KB)                   = 1147312
+  0: The total amount of wall time                        = 344.188009
+  0: The maximum resident set size (KB)                   = 1143896
 
 Test 006 cpld_control_c96_p8 PASS
 
 
-baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20220613/INTEL/cpld_control_c96_p8
-working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/FV3_RT/rt_173298/cpld_restart_c96_p8
+baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20221005/INTEL/cpld_control_c96_p8
+working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/SD_RT/rt_31266/cpld_restart_c96_p8
 Checking test 007 cpld_restart_c96_p8 results ....
  Comparing sfcf024.tile1.nc .........OK
  Comparing sfcf024.tile2.nc .........OK
@@ -450,14 +450,14 @@ Checking test 007 cpld_restart_c96_p8 results ....
  Comparing RESTART/iced.2021-03-23-21600.nc .........OK
  Comparing RESTART/ufs.cpld.cpl.r.2021-03-23-21600.nc .........OK
 
-  0: The total amount of wall time                        = 194.109063
-  0: The maximum resident set size (KB)                   = 1107620
+  0: The total amount of wall time                        = 191.262966
+  0: The maximum resident set size (KB)                   = 1107700
 
 Test 007 cpld_restart_c96_p8 PASS
 
 
-baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20220613/INTEL/cpld_control_c192_p8
-working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/FV3_RT/rt_173298/cpld_control_c192_p8
+baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20221005/INTEL/cpld_control_c192_p8
+working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/SD_RT/rt_31266/cpld_control_c192_p8
 Checking test 008 cpld_control_c192_p8 results ....
  Comparing sfcf036.tile1.nc .........OK
  Comparing sfcf036.tile2.nc .........OK
@@ -508,14 +508,14 @@ Checking test 008 cpld_control_c192_p8 results ....
  Comparing RESTART/iced.2021-03-23-64800.nc .........OK
  Comparing RESTART/ufs.cpld.cpl.r.2021-03-23-64800.nc .........OK
 
-  0: The total amount of wall time                        = 1469.949950
-  0: The maximum resident set size (KB)                   = 1579556
+  0: The total amount of wall time                        = 1462.474205
+  0: The maximum resident set size (KB)                   = 1578896
 
 Test 008 cpld_control_c192_p8 PASS
 
 
-baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20220613/INTEL/cpld_control_c192_p8
-working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/FV3_RT/rt_173298/cpld_restart_c192_p8
+baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20221005/INTEL/cpld_control_c192_p8
+working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/SD_RT/rt_31266/cpld_restart_c192_p8
 Checking test 009 cpld_restart_c192_p8 results ....
  Comparing sfcf036.tile1.nc .........OK
  Comparing sfcf036.tile2.nc .........OK
@@ -566,14 +566,14 @@ Checking test 009 cpld_restart_c192_p8 results ....
  Comparing RESTART/iced.2021-03-23-64800.nc .........OK
  Comparing RESTART/ufs.cpld.cpl.r.2021-03-23-64800.nc .........OK
 
-  0: The total amount of wall time                        = 963.635908
-  0: The maximum resident set size (KB)                   = 1810228
+  0: The total amount of wall time                        = 962.779141
+  0: The maximum resident set size (KB)                   = 1813504
 
 Test 009 cpld_restart_c192_p8 PASS
 
 
-baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20220613/INTEL/cpld_control_c384_p8
-working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/FV3_RT/rt_173298/cpld_control_c384_p8
+baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20221005/INTEL/cpld_control_c384_p8
+working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/SD_RT/rt_31266/cpld_control_c384_p8
 Checking test 010 cpld_control_c384_p8 results ....
  Comparing sfcf006.nc .........OK
  Comparing atmf006.nc .........OK
@@ -617,14 +617,14 @@ Checking test 010 cpld_control_c384_p8 results ....
  Comparing RESTART/iced.2021-03-22-43200.nc .........OK
  Comparing RESTART/ufs.cpld.cpl.r.2021-03-22-43200.nc .........OK
 
-  0: The total amount of wall time                        = 1182.251240
-  0: The maximum resident set size (KB)                   = 2827632
+  0: The total amount of wall time                        = 1195.323474
+  0: The maximum resident set size (KB)                   = 2826728
 
 Test 010 cpld_control_c384_p8 PASS
 
 
-baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20220613/INTEL/cpld_control_c384_p8
-working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/FV3_RT/rt_173298/cpld_restart_c384_p8
+baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20221005/INTEL/cpld_control_c384_p8
+working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/SD_RT/rt_31266/cpld_restart_c384_p8
 Checking test 011 cpld_restart_c384_p8 results ....
  Comparing sfcf006.nc .........OK
  Comparing atmf006.nc .........OK
@@ -668,14 +668,14 @@ Checking test 011 cpld_restart_c384_p8 results ....
  Comparing RESTART/iced.2021-03-22-43200.nc .........OK
  Comparing RESTART/ufs.cpld.cpl.r.2021-03-22-43200.nc .........OK
 
-  0: The total amount of wall time                        = 670.437568
-  0: The maximum resident set size (KB)                   = 2798996
+  0: The total amount of wall time                        = 661.776864
+  0: The maximum resident set size (KB)                   = 2798840
 
 Test 011 cpld_restart_c384_p8 PASS
 
 
-baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20220613/INTEL/cpld_debug_p8
-working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/FV3_RT/rt_173298/cpld_debug_p8
+baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20221005/INTEL/cpld_debug_p8
+working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/SD_RT/rt_31266/cpld_debug_p8
 Checking test 012 cpld_debug_p8 results ....
  Comparing sfcf006.tile1.nc .........OK
  Comparing sfcf006.tile2.nc .........OK
@@ -726,14 +726,14 @@ Checking test 012 cpld_debug_p8 results ....
  Comparing RESTART/iced.2021-03-22-43200.nc .........OK
  Comparing RESTART/ufs.cpld.cpl.r.2021-03-22-43200.nc .........OK
 
-  0: The total amount of wall time                        = 1024.236411
-  0: The maximum resident set size (KB)                   = 1266948
+  0: The total amount of wall time                        = 1037.940028
+  0: The maximum resident set size (KB)                   = 1268896
 
 Test 012 cpld_debug_p8 PASS
 
 
-baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20220613/INTEL/control
-working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/FV3_RT/rt_173298/control
+baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20221005/INTEL/control
+working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/SD_RT/rt_31266/control
 Checking test 013 control results ....
  Comparing sfcf000.nc .........OK
  Comparing sfcf021.nc .........OK
@@ -780,14 +780,14 @@ Checking test 013 control results ....
  Comparing RESTART/sfc_data.tile5.nc .........OK
  Comparing RESTART/sfc_data.tile6.nc .........OK
 
-  0: The total amount of wall time                        = 129.599399
-  0: The maximum resident set size (KB)                   = 467716
+  0: The total amount of wall time                        = 125.704175
+  0: The maximum resident set size (KB)                   = 468828
 
 Test 013 control PASS
 
 
-baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20220613/INTEL/control
-working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/FV3_RT/rt_173298/control_decomp
+baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20221005/INTEL/control
+working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/SD_RT/rt_31266/control_decomp
 Checking test 014 control_decomp results ....
  Comparing sfcf000.nc .........OK
  Comparing sfcf024.nc .........OK
@@ -830,28 +830,28 @@ Checking test 014 control_decomp results ....
  Comparing RESTART/sfc_data.tile5.nc .........OK
  Comparing RESTART/sfc_data.tile6.nc .........OK
 
-  0: The total amount of wall time                        = 139.428003
-  0: The maximum resident set size (KB)                   = 465788
+  0: The total amount of wall time                        = 139.972689
+  0: The maximum resident set size (KB)                   = 465324
 
 Test 014 control_decomp PASS
 
 
-baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20220613/INTEL/control
-working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/FV3_RT/rt_173298/control_2dwrtdecomp
+baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20221005/INTEL/control
+working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/SD_RT/rt_31266/control_2dwrtdecomp
 Checking test 015 control_2dwrtdecomp results ....
  Comparing sfcf000.nc .........OK
  Comparing sfcf024.nc .........OK
  Comparing atmf000.nc .........OK
  Comparing atmf024.nc .........OK
 
-  0: The total amount of wall time                        = 122.765425
-  0: The maximum resident set size (KB)                   = 464124
+  0: The total amount of wall time                        = 121.963302
+  0: The maximum resident set size (KB)                   = 466440
 
 Test 015 control_2dwrtdecomp PASS
 
 
-baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20220613/INTEL/control
-working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/FV3_RT/rt_173298/control_2threads
+baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20221005/INTEL/control
+working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/SD_RT/rt_31266/control_2threads
 Checking test 016 control_2threads results ....
  Comparing sfcf000.nc .........OK
  Comparing sfcf024.nc .........OK
@@ -894,14 +894,14 @@ Checking test 016 control_2threads results ....
  Comparing RESTART/sfc_data.tile5.nc .........OK
  Comparing RESTART/sfc_data.tile6.nc .........OK
 
- 0: The total amount of wall time                        = 157.557169
- 0: The maximum resident set size (KB)                   = 518048
+ 0: The total amount of wall time                        = 156.505253
+ 0: The maximum resident set size (KB)                   = 517020
 
 Test 016 control_2threads PASS
 
 
-baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20220613/INTEL/control
-working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/FV3_RT/rt_173298/control_restart
+baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20221005/INTEL/control
+working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/SD_RT/rt_31266/control_restart
 Checking test 017 control_restart results ....
  Comparing sfcf024.nc .........OK
  Comparing atmf024.nc .........OK
@@ -940,14 +940,14 @@ Checking test 017 control_restart results ....
  Comparing RESTART/sfc_data.tile5.nc .........OK
  Comparing RESTART/sfc_data.tile6.nc .........OK
 
-  0: The total amount of wall time                        = 68.009879
-  0: The maximum resident set size (KB)                   = 214272
+  0: The total amount of wall time                        = 67.412099
+  0: The maximum resident set size (KB)                   = 211484
 
 Test 017 control_restart PASS
 
 
-baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20220613/INTEL/control
-working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/FV3_RT/rt_173298/control_fhzero
+baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20221005/INTEL/control
+working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/SD_RT/rt_31266/control_fhzero
 Checking test 018 control_fhzero results ....
  Comparing sfcf000.nc ............ALT CHECK......OK
  Comparing sfcf021.nc ............ALT CHECK......OK
@@ -990,14 +990,14 @@ Checking test 018 control_fhzero results ....
  Comparing RESTART/sfc_data.tile5.nc .........OK
  Comparing RESTART/sfc_data.tile6.nc .........OK
 
-  0: The total amount of wall time                        = 124.818427
-  0: The maximum resident set size (KB)                   = 463996
+  0: The total amount of wall time                        = 120.890648
+  0: The maximum resident set size (KB)                   = 469404
 
 Test 018 control_fhzero PASS
 
 
-baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20220613/INTEL/control_CubedSphereGrid
-working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/FV3_RT/rt_173298/control_CubedSphereGrid
+baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20221005/INTEL/control_CubedSphereGrid
+working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/SD_RT/rt_31266/control_CubedSphereGrid
 Checking test 019 control_CubedSphereGrid results ....
  Comparing sfcf000.tile1.nc .........OK
  Comparing sfcf000.tile2.nc .........OK
@@ -1024,14 +1024,14 @@ Checking test 019 control_CubedSphereGrid results ....
  Comparing atmf024.tile5.nc .........OK
  Comparing atmf024.tile6.nc .........OK
 
-  0: The total amount of wall time                        = 126.397063
-  0: The maximum resident set size (KB)                   = 464476
+  0: The total amount of wall time                        = 124.614563
+  0: The maximum resident set size (KB)                   = 469392
 
 Test 019 control_CubedSphereGrid PASS
 
 
-baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20220613/INTEL/control_latlon
-working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/FV3_RT/rt_173298/control_latlon
+baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20221005/INTEL/control_latlon
+working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/SD_RT/rt_31266/control_latlon
 Checking test 020 control_latlon results ....
  Comparing sfcf000.nc .........OK
  Comparing sfcf024.nc .........OK
@@ -1042,17 +1042,17 @@ Checking test 020 control_latlon results ....
  Comparing GFSPRS.GrbF00 .........OK
  Comparing GFSPRS.GrbF24 .........OK
 
-  0: The total amount of wall time                        = 130.666094
-  0: The maximum resident set size (KB)                   = 469592
+  0: The total amount of wall time                        = 125.838885
+  0: The maximum resident set size (KB)                   = 466640
 
 Test 020 control_latlon PASS
 
 
-baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20220613/INTEL/control_wrtGauss_netcdf_parallel
-working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/FV3_RT/rt_173298/control_wrtGauss_netcdf_parallel
+baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20221005/INTEL/control_wrtGauss_netcdf_parallel
+working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/SD_RT/rt_31266/control_wrtGauss_netcdf_parallel
 Checking test 021 control_wrtGauss_netcdf_parallel results ....
  Comparing sfcf000.nc ............ALT CHECK......OK
- Comparing sfcf024.nc ............ALT CHECK......OK
+ Comparing sfcf024.nc .........OK
  Comparing atmf000.nc .........OK
  Comparing atmf024.nc .........OK
  Comparing GFSFLX.GrbF00 .........OK
@@ -1060,14 +1060,14 @@ Checking test 021 control_wrtGauss_netcdf_parallel results ....
  Comparing GFSPRS.GrbF00 .........OK
  Comparing GFSPRS.GrbF24 .........OK
 
-  0: The total amount of wall time                        = 133.606500
-  0: The maximum resident set size (KB)                   = 470572
+  0: The total amount of wall time                        = 129.476484
+  0: The maximum resident set size (KB)                   = 467836
 
 Test 021 control_wrtGauss_netcdf_parallel PASS
 
 
-baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20220613/INTEL/control_c48
-working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/FV3_RT/rt_173298/control_c48
+baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20221005/INTEL/control_c48
+working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/SD_RT/rt_31266/control_c48
 Checking test 022 control_c48 results ....
  Comparing sfcf000.nc .........OK
  Comparing sfcf024.nc .........OK
@@ -1106,14 +1106,14 @@ Checking test 022 control_c48 results ....
  Comparing RESTART/sfc_data.tile5.nc .........OK
  Comparing RESTART/sfc_data.tile6.nc .........OK
 
-0: The total amount of wall time                        = 327.911026
-0: The maximum resident set size (KB)                   = 662472
+0: The total amount of wall time                        = 325.376252
+0: The maximum resident set size (KB)                   = 665924
 
 Test 022 control_c48 PASS
 
 
-baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20220613/INTEL/control_c192
-working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/FV3_RT/rt_173298/control_c192
+baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20221005/INTEL/control_c192
+working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/SD_RT/rt_31266/control_c192
 Checking test 023 control_c192 results ....
  Comparing sfcf000.nc .........OK
  Comparing sfcf024.nc .........OK
@@ -1124,14 +1124,14 @@ Checking test 023 control_c192 results ....
  Comparing GFSPRS.GrbF00 .........OK
  Comparing GFSPRS.GrbF24 .........OK
 
-  0: The total amount of wall time                        = 478.183430
-  0: The maximum resident set size (KB)                   = 566472
+  0: The total amount of wall time                        = 473.438037
+  0: The maximum resident set size (KB)                   = 567948
 
 Test 023 control_c192 PASS
 
 
-baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20220613/INTEL/control_c384
-working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/FV3_RT/rt_173298/control_c384
+baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20221005/INTEL/control_c384
+working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/SD_RT/rt_31266/control_c384
 Checking test 024 control_c384 results ....
  Comparing sfcf000.nc .........OK
  Comparing sfcf012.nc .........OK
@@ -1142,14 +1142,14 @@ Checking test 024 control_c384 results ....
  Comparing GFSPRS.GrbF00 .........OK
  Comparing GFSPRS.GrbF12 .........OK
 
-  0: The total amount of wall time                        = 649.770978
-  0: The maximum resident set size (KB)                   = 838636
+  0: The total amount of wall time                        = 651.337823
+  0: The maximum resident set size (KB)                   = 835324
 
 Test 024 control_c384 PASS
 
 
-baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20220613/INTEL/control_c384gdas
-working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/FV3_RT/rt_173298/control_c384gdas
+baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20221005/INTEL/control_c384gdas
+working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/SD_RT/rt_31266/control_c384gdas
 Checking test 025 control_c384gdas results ....
  Comparing sfcf000.nc .........OK
  Comparing sfcf006.nc .........OK
@@ -1192,14 +1192,14 @@ Checking test 025 control_c384gdas results ....
  Comparing RESTART/sfc_data.tile5.nc .........OK
  Comparing RESTART/sfc_data.tile6.nc .........OK
 
-  0: The total amount of wall time                        = 600.543319
-  0: The maximum resident set size (KB)                   = 992164
+  0: The total amount of wall time                        = 599.336290
+  0: The maximum resident set size (KB)                   = 993816
 
 Test 025 control_c384gdas PASS
 
 
-baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20220613/INTEL/control_stochy
-working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/FV3_RT/rt_173298/control_stochy
+baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20221005/INTEL/control_stochy
+working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/SD_RT/rt_31266/control_stochy
 Checking test 026 control_stochy results ....
  Comparing sfcf000.nc .........OK
  Comparing sfcf012.nc .........OK
@@ -1210,28 +1210,28 @@ Checking test 026 control_stochy results ....
  Comparing GFSPRS.GrbF00 .........OK
  Comparing GFSPRS.GrbF12 .........OK
 
-  0: The total amount of wall time                        = 84.217987
-  0: The maximum resident set size (KB)                   = 467116
+  0: The total amount of wall time                        = 85.926150
+  0: The maximum resident set size (KB)                   = 467688
 
 Test 026 control_stochy PASS
 
 
-baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20220613/INTEL/control_stochy
-working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/FV3_RT/rt_173298/control_stochy_restart
+baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20221005/INTEL/control_stochy
+working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/SD_RT/rt_31266/control_stochy_restart
 Checking test 027 control_stochy_restart results ....
  Comparing sfcf012.nc .........OK
  Comparing atmf012.nc .........OK
  Comparing GFSFLX.GrbF12 .........OK
  Comparing GFSPRS.GrbF12 .........OK
 
-  0: The total amount of wall time                        = 44.583839
-  0: The maximum resident set size (KB)                   = 253244
+  0: The total amount of wall time                        = 45.526821
+  0: The maximum resident set size (KB)                   = 252096
 
 Test 027 control_stochy_restart PASS
 
 
-baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20220613/INTEL/control_lndp
-working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/FV3_RT/rt_173298/control_lndp
+baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20221005/INTEL/control_lndp
+working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/SD_RT/rt_31266/control_lndp
 Checking test 028 control_lndp results ....
  Comparing sfcf000.nc .........OK
  Comparing sfcf012.nc .........OK
@@ -1242,14 +1242,14 @@ Checking test 028 control_lndp results ....
  Comparing GFSPRS.GrbF00 .........OK
  Comparing GFSPRS.GrbF12 .........OK
 
-  0: The total amount of wall time                        = 78.130988
-  0: The maximum resident set size (KB)                   = 472692
+  0: The total amount of wall time                        = 77.150867
+  0: The maximum resident set size (KB)                   = 467424
 
 Test 028 control_lndp PASS
 
 
-baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20220613/INTEL/control_iovr4
-working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/FV3_RT/rt_173298/control_iovr4
+baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20221005/INTEL/control_iovr4
+working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/SD_RT/rt_31266/control_iovr4
 Checking test 029 control_iovr4 results ....
  Comparing sfcf000.nc .........OK
  Comparing sfcf021.nc .........OK
@@ -1264,14 +1264,14 @@ Checking test 029 control_iovr4 results ....
  Comparing GFSPRS.GrbF21 .........OK
  Comparing GFSPRS.GrbF24 .........OK
 
-  0: The total amount of wall time                        = 133.820369
-  0: The maximum resident set size (KB)                   = 466664
+  0: The total amount of wall time                        = 131.972241
+  0: The maximum resident set size (KB)                   = 464948
 
 Test 029 control_iovr4 PASS
 
 
-baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20220613/INTEL/control_iovr5
-working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/FV3_RT/rt_173298/control_iovr5
+baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20221005/INTEL/control_iovr5
+working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/SD_RT/rt_31266/control_iovr5
 Checking test 030 control_iovr5 results ....
  Comparing sfcf000.nc .........OK
  Comparing sfcf021.nc .........OK
@@ -1286,14 +1286,14 @@ Checking test 030 control_iovr5 results ....
  Comparing GFSPRS.GrbF21 .........OK
  Comparing GFSPRS.GrbF24 .........OK
 
-  0: The total amount of wall time                        = 128.974647
-  0: The maximum resident set size (KB)                   = 468772
+  0: The total amount of wall time                        = 128.594616
+  0: The maximum resident set size (KB)                   = 469276
 
 Test 030 control_iovr5 PASS
 
 
-baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20220613/INTEL/control_p8
-working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/FV3_RT/rt_173298/control_p8
+baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20221005/INTEL/control_p8
+working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/SD_RT/rt_31266/control_p8
 Checking test 031 control_p8 results ....
  Comparing sfcf000.nc .........OK
  Comparing sfcf021.nc .........OK
@@ -1340,14 +1340,14 @@ Checking test 031 control_p8 results ....
  Comparing RESTART/sfc_data.tile5.nc .........OK
  Comparing RESTART/sfc_data.tile6.nc .........OK
 
-  0: The total amount of wall time                        = 175.851573
-  0: The maximum resident set size (KB)                   = 851716
+  0: The total amount of wall time                        = 171.650361
+  0: The maximum resident set size (KB)                   = 853456
 
 Test 031 control_p8 PASS
 
 
-baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20220613/INTEL/control_p8_lndp
-working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/FV3_RT/rt_173298/control_p8_lndp
+baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20221005/INTEL/control_p8_lndp
+working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/SD_RT/rt_31266/control_p8_lndp
 Checking test 032 control_p8_lndp results ....
  Comparing sfcf000.nc .........OK
  Comparing sfcf021.nc .........OK
@@ -1366,14 +1366,14 @@ Checking test 032 control_p8_lndp results ....
  Comparing GFSPRS.GrbF24 .........OK
  Comparing GFSPRS.GrbF48 .........OK
 
-  0: The total amount of wall time                        = 326.791618
-  0: The maximum resident set size (KB)                   = 855864
+  0: The total amount of wall time                        = 323.974086
+  0: The maximum resident set size (KB)                   = 856424
 
 Test 032 control_p8_lndp PASS
 
 
-baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20220613/INTEL/control_p8
-working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/FV3_RT/rt_173298/control_restart_p8
+baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20221005/INTEL/control_p8
+working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/SD_RT/rt_31266/control_restart_p8
 Checking test 033 control_restart_p8 results ....
  Comparing sfcf024.nc .........OK
  Comparing atmf024.nc .........OK
@@ -1412,14 +1412,14 @@ Checking test 033 control_restart_p8 results ....
  Comparing RESTART/sfc_data.tile5.nc .........OK
  Comparing RESTART/sfc_data.tile6.nc .........OK
 
-  0: The total amount of wall time                        = 91.871416
-  0: The maximum resident set size (KB)                   = 599112
+  0: The total amount of wall time                        = 89.735394
+  0: The maximum resident set size (KB)                   = 599872
 
 Test 033 control_restart_p8 PASS
 
 
-baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20220613/INTEL/control_p8
-working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/FV3_RT/rt_173298/control_decomp_p8
+baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20221005/INTEL/control_p8
+working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/SD_RT/rt_31266/control_decomp_p8
 Checking test 034 control_decomp_p8 results ....
  Comparing sfcf000.nc .........OK
  Comparing sfcf024.nc .........OK
@@ -1462,14 +1462,14 @@ Checking test 034 control_decomp_p8 results ....
  Comparing RESTART/sfc_data.tile5.nc .........OK
  Comparing RESTART/sfc_data.tile6.nc .........OK
 
-  0: The total amount of wall time                        = 177.586953
-  0: The maximum resident set size (KB)                   = 847964
+  0: The total amount of wall time                        = 179.610895
+  0: The maximum resident set size (KB)                   = 846108
 
 Test 034 control_decomp_p8 PASS
 
 
-baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20220613/INTEL/control_p8
-working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/FV3_RT/rt_173298/control_2threads_p8
+baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20221005/INTEL/control_p8
+working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/SD_RT/rt_31266/control_2threads_p8
 Checking test 035 control_2threads_p8 results ....
  Comparing sfcf000.nc .........OK
  Comparing sfcf024.nc .........OK
@@ -1512,14 +1512,14 @@ Checking test 035 control_2threads_p8 results ....
  Comparing RESTART/sfc_data.tile5.nc .........OK
  Comparing RESTART/sfc_data.tile6.nc .........OK
 
- 0: The total amount of wall time                        = 204.629811
- 0: The maximum resident set size (KB)                   = 928500
+ 0: The total amount of wall time                        = 203.226943
+ 0: The maximum resident set size (KB)                   = 934496
 
 Test 035 control_2threads_p8 PASS
 
 
-baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20220613/INTEL/control_p8_rrtmgp
-working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/FV3_RT/rt_173298/control_p8_rrtmgp
+baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20221005/INTEL/control_p8_rrtmgp
+working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/SD_RT/rt_31266/control_p8_rrtmgp
 Checking test 036 control_p8_rrtmgp results ....
  Comparing sfcf000.nc .........OK
  Comparing sfcf021.nc .........OK
@@ -1566,14 +1566,14 @@ Checking test 036 control_p8_rrtmgp results ....
  Comparing RESTART/sfc_data.tile5.nc .........OK
  Comparing RESTART/sfc_data.tile6.nc .........OK
 
-  0: The total amount of wall time                        = 202.790184
-  0: The maximum resident set size (KB)                   = 970480
+  0: The total amount of wall time                        = 198.936902
+  0: The maximum resident set size (KB)                   = 971388
 
 Test 036 control_p8_rrtmgp PASS
 
 
-baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20220613/INTEL/fv3_regional_control
-working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/FV3_RT/rt_173298/regional_control
+baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20221005/INTEL/fv3_regional_control
+working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/SD_RT/rt_31266/regional_control
 Checking test 037 regional_control results ....
  Comparing dynf000.nc .........OK
  Comparing dynf024.nc .........OK
@@ -1584,42 +1584,42 @@ Checking test 037 regional_control results ....
  Comparing NATLEV.GrbF00 .........OK
  Comparing NATLEV.GrbF24 .........OK
 
- 0: The total amount of wall time                        = 373.316834
- 0: The maximum resident set size (KB)                   = 583312
+ 0: The total amount of wall time                        = 373.835557
+ 0: The maximum resident set size (KB)                   = 584236
 
 Test 037 regional_control PASS
 
 
-baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20220613/INTEL/fv3_regional_control
-working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/FV3_RT/rt_173298/regional_restart
+baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20221005/INTEL/fv3_regional_control
+working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/SD_RT/rt_31266/regional_restart
 Checking test 038 regional_restart results ....
  Comparing dynf024.nc .........OK
  Comparing phyf024.nc .........OK
  Comparing PRSLEV.GrbF24 .........OK
  Comparing NATLEV.GrbF24 .........OK
 
- 0: The total amount of wall time                        = 208.120294
- 0: The maximum resident set size (KB)                   = 585068
+ 0: The total amount of wall time                        = 209.427324
+ 0: The maximum resident set size (KB)                   = 581024
 
 Test 038 regional_restart PASS
 
 
-baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20220613/INTEL/fv3_regional_control
-working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/FV3_RT/rt_173298/regional_control_2dwrtdecomp
+baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20221005/INTEL/fv3_regional_control
+working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/SD_RT/rt_31266/regional_control_2dwrtdecomp
 Checking test 039 regional_control_2dwrtdecomp results ....
  Comparing dynf000.nc .........OK
  Comparing dynf024.nc .........OK
  Comparing phyf000.nc .........OK
  Comparing phyf024.nc .........OK
 
- 0: The total amount of wall time                        = 369.768554
- 0: The maximum resident set size (KB)                   = 583736
+ 0: The total amount of wall time                        = 375.099329
+ 0: The maximum resident set size (KB)                   = 580688
 
 Test 039 regional_control_2dwrtdecomp PASS
 
 
-baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20220613/INTEL/fv3_regional_noquilt
-working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/FV3_RT/rt_173298/regional_noquilt
+baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20221005/INTEL/fv3_regional_noquilt
+working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/SD_RT/rt_31266/regional_noquilt
 Checking test 040 regional_noquilt results ....
  Comparing atmos_4xdaily.nc .........OK
  Comparing fv3_history2d.nc .........OK
@@ -1627,14 +1627,14 @@ Checking test 040 regional_noquilt results ....
  Comparing RESTART/fv_core.res.tile1_new.nc .........OK
  Comparing RESTART/fv_tracer.res.tile1_new.nc .........OK
 
- 0: The total amount of wall time                        = 380.322142
- 0: The maximum resident set size (KB)                   = 594800
+ 0: The total amount of wall time                        = 376.818147
+ 0: The maximum resident set size (KB)                   = 596612
 
 Test 040 regional_noquilt PASS
 
 
-baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20220613/INTEL/fv3_regional_control
-working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/FV3_RT/rt_173298/regional_2threads
+baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20221005/INTEL/fv3_regional_control
+working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/SD_RT/rt_31266/regional_2threads
 Checking test 041 regional_2threads results ....
  Comparing dynf000.nc .........OK
  Comparing dynf024.nc .........OK
@@ -1645,28 +1645,28 @@ Checking test 041 regional_2threads results ....
  Comparing NATLEV.GrbF00 .........OK
  Comparing NATLEV.GrbF24 .........OK
 
- 0: The total amount of wall time                        = 263.917233
- 0: The maximum resident set size (KB)                   = 578776
+ 0: The total amount of wall time                        = 271.076127
+ 0: The maximum resident set size (KB)                   = 580328
 
 Test 041 regional_2threads PASS
 
 
-baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20220613/INTEL/fv3_regional_netcdf_parallel
-working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/FV3_RT/rt_173298/regional_netcdf_parallel
+baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20221005/INTEL/fv3_regional_netcdf_parallel
+working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/SD_RT/rt_31266/regional_netcdf_parallel
 Checking test 042 regional_netcdf_parallel results ....
  Comparing dynf000.nc .........OK
- Comparing dynf024.nc ............ALT CHECK......OK
+ Comparing dynf024.nc .........OK
  Comparing phyf000.nc .........OK
  Comparing phyf024.nc .........OK
 
- 0: The total amount of wall time                        = 371.483529
- 0: The maximum resident set size (KB)                   = 582708
+ 0: The total amount of wall time                        = 369.963310
+ 0: The maximum resident set size (KB)                   = 578456
 
 Test 042 regional_netcdf_parallel PASS
 
 
-baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20220613/INTEL/fv3_regional_3km
-working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/FV3_RT/rt_173298/regional_3km
+baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20221005/INTEL/fv3_regional_3km
+working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/SD_RT/rt_31266/regional_3km
 Checking test 043 regional_3km results ....
  Comparing dynf000.nc .........OK
  Comparing dynf006.nc .........OK
@@ -1677,29 +1677,93 @@ Checking test 043 regional_3km results ....
  Comparing NATLEV.GrbF00 .........OK
  Comparing NATLEV.GrbF06 .........OK
 
-  0: The total amount of wall time                        = 255.561021
-  0: The maximum resident set size (KB)                   = 620816
+  0: The total amount of wall time                        = 263.726511
+  0: The maximum resident set size (KB)                   = 621308
 
 Test 043 regional_3km PASS
 
 
-baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20220613/INTEL/hrrr_control_debug
-working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/FV3_RT/rt_173298/hrrr_control_debug
+baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20221005/INTEL/hrrr_control_debug
+working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/SD_RT/rt_31266/hrrr_control_debug
 Checking test 044 hrrr_control_debug results ....
  Comparing sfcf000.nc .........OK
  Comparing sfcf001.nc .........OK
  Comparing atmf000.nc .........OK
  Comparing atmf001.nc .........OK
 
-  0: The total amount of wall time                        = 264.242738
-  0: The maximum resident set size (KB)                   = 999868
+  0: The total amount of wall time                        = 255.029702
+  0: The maximum resident set size (KB)                   = 1000496
 
 Test 044 hrrr_control_debug PASS
 
 
-baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20220613/INTEL/rap_control
-working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/FV3_RT/rt_173298/rap_control
-Checking test 045 rap_control results ....
+baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20221005/INTEL/rrfs_conus13km_hrrr_warm_debug
+working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/SD_RT/rt_31266/rrfs_conus13km_hrrr_warm_debug
+Checking test 045 rrfs_conus13km_hrrr_warm_debug results ....
+ Comparing sfcf000.nc .........OK
+ Comparing sfcf001.nc .........OK
+ Comparing sfcf002.nc .........OK
+ Comparing atmf000.nc .........OK
+ Comparing atmf001.nc .........OK
+ Comparing atmf002.nc .........OK
+
+  0: The total amount of wall time                        = 1434.176991
+  0: The maximum resident set size (KB)                   = 746644
+
+Test 045 rrfs_conus13km_hrrr_warm_debug PASS
+
+
+baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20221005/INTEL/rrfs_conus13km_radar_tten_warm_debug
+working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/SD_RT/rt_31266/rrfs_conus13km_radar_tten_warm_debug
+Checking test 046 rrfs_conus13km_radar_tten_warm_debug results ....
+ Comparing sfcf000.nc .........OK
+ Comparing sfcf001.nc .........OK
+ Comparing sfcf002.nc .........OK
+ Comparing atmf000.nc .........OK
+ Comparing atmf001.nc .........OK
+ Comparing atmf002.nc .........OK
+
+  0: The total amount of wall time                        = 1467.368324
+  0: The maximum resident set size (KB)                   = 781704
+
+Test 046 rrfs_conus13km_radar_tten_warm_debug PASS
+
+
+baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20221005/INTEL/rrfs_smoke_conus13km_hrrr_warm_debug
+working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/SD_RT/rt_31266/rrfs_smoke_conus13km_hrrr_warm_debug
+Checking test 047 rrfs_smoke_conus13km_hrrr_warm_debug results ....
+ Comparing sfcf000.nc .........OK
+ Comparing sfcf001.nc .........OK
+ Comparing sfcf002.nc .........OK
+ Comparing atmf000.nc .........OK
+ Comparing atmf001.nc .........OK
+ Comparing atmf002.nc .........OK
+
+  0: The total amount of wall time                        = 1561.885172
+  0: The maximum resident set size (KB)                   = 765936
+
+Test 047 rrfs_smoke_conus13km_hrrr_warm_debug PASS
+
+
+baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20221005/INTEL/rrfs_smoke_conus13km_radar_tten_warm_debug
+working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/SD_RT/rt_31266/rrfs_smoke_conus13km_radar_tten_warm_debug
+Checking test 048 rrfs_smoke_conus13km_radar_tten_warm_debug results ....
+ Comparing sfcf000.nc .........OK
+ Comparing sfcf001.nc .........OK
+ Comparing sfcf002.nc .........OK
+ Comparing atmf000.nc .........OK
+ Comparing atmf001.nc .........OK
+ Comparing atmf002.nc .........OK
+
+  0: The total amount of wall time                        = 1576.979091
+  0: The maximum resident set size (KB)                   = 775708
+
+Test 048 rrfs_smoke_conus13km_radar_tten_warm_debug PASS
+
+
+baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20221005/INTEL/rap_control
+working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/SD_RT/rt_31266/rap_control
+Checking test 049 rap_control results ....
  Comparing sfcf000.nc .........OK
  Comparing sfcf009.nc .........OK
  Comparing sfcf012.nc .........OK
@@ -1745,15 +1809,15 @@ Checking test 045 rap_control results ....
  Comparing RESTART/sfc_data.tile5.nc .........OK
  Comparing RESTART/sfc_data.tile6.nc .........OK
 
-  0: The total amount of wall time                        = 450.261958
-  0: The maximum resident set size (KB)                   = 839712
+  0: The total amount of wall time                        = 439.893715
+  0: The maximum resident set size (KB)                   = 839884
 
-Test 045 rap_control PASS
+Test 049 rap_control PASS
 
 
-baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20220613/INTEL/rap_rrtmgp
-working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/FV3_RT/rt_173298/rap_rrtmgp
-Checking test 046 rap_rrtmgp results ....
+baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20221005/INTEL/rap_rrtmgp
+working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/SD_RT/rt_31266/rap_rrtmgp
+Checking test 050 rap_rrtmgp results ....
  Comparing sfcf000.nc .........OK
  Comparing sfcf009.nc .........OK
  Comparing sfcf012.nc .........OK
@@ -1799,15 +1863,15 @@ Checking test 046 rap_rrtmgp results ....
  Comparing RESTART/sfc_data.tile5.nc .........OK
  Comparing RESTART/sfc_data.tile6.nc .........OK
 
-  0: The total amount of wall time                        = 478.941816
-  0: The maximum resident set size (KB)                   = 957404
+  0: The total amount of wall time                        = 477.091906
+  0: The maximum resident set size (KB)                   = 958440
 
-Test 046 rap_rrtmgp PASS
+Test 050 rap_rrtmgp PASS
 
 
-baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20220613/INTEL/regional_spp_sppt_shum_skeb
-working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/FV3_RT/rt_173298/regional_spp_sppt_shum_skeb
-Checking test 047 regional_spp_sppt_shum_skeb results ....
+baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20221005/INTEL/regional_spp_sppt_shum_skeb
+working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/SD_RT/rt_31266/regional_spp_sppt_shum_skeb
+Checking test 051 regional_spp_sppt_shum_skeb results ....
  Comparing dynf000.nc .........OK
  Comparing dynf001.nc .........OK
  Comparing phyf000.nc .........OK
@@ -1817,15 +1881,15 @@ Checking test 047 regional_spp_sppt_shum_skeb results ....
  Comparing NATLEV.GrbF00 .........OK
  Comparing NATLEV.GrbF01 .........OK
 
-  0: The total amount of wall time                        = 327.978368
-  0: The maximum resident set size (KB)                   = 1212048
+  0: The total amount of wall time                        = 326.053613
+  0: The maximum resident set size (KB)                   = 1216344
 
-Test 047 regional_spp_sppt_shum_skeb PASS
+Test 051 regional_spp_sppt_shum_skeb PASS
 
 
-baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20220613/INTEL/rap_control
-working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/FV3_RT/rt_173298/rap_decomp
-Checking test 048 rap_decomp results ....
+baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20221005/INTEL/rap_control
+working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/SD_RT/rt_31266/rap_decomp
+Checking test 052 rap_decomp results ....
  Comparing sfcf000.nc .........OK
  Comparing sfcf009.nc .........OK
  Comparing sfcf012.nc .........OK
@@ -1871,15 +1935,15 @@ Checking test 048 rap_decomp results ....
  Comparing RESTART/sfc_data.tile5.nc .........OK
  Comparing RESTART/sfc_data.tile6.nc .........OK
 
-  0: The total amount of wall time                        = 459.829537
-  0: The maximum resident set size (KB)                   = 844272
+  0: The total amount of wall time                        = 461.746827
+  0: The maximum resident set size (KB)                   = 843896
 
-Test 048 rap_decomp PASS
+Test 052 rap_decomp PASS
 
 
-baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20220613/INTEL/rap_control
-working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/FV3_RT/rt_173298/rap_2threads
-Checking test 049 rap_2threads results ....
+baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20221005/INTEL/rap_control
+working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/SD_RT/rt_31266/rap_2threads
+Checking test 053 rap_2threads results ....
  Comparing sfcf000.nc .........OK
  Comparing sfcf009.nc .........OK
  Comparing sfcf012.nc .........OK
@@ -1925,15 +1989,15 @@ Checking test 049 rap_2threads results ....
  Comparing RESTART/sfc_data.tile5.nc .........OK
  Comparing RESTART/sfc_data.tile6.nc .........OK
 
- 0: The total amount of wall time                        = 515.683993
- 0: The maximum resident set size (KB)                   = 907260
+ 0: The total amount of wall time                        = 515.108267
+ 0: The maximum resident set size (KB)                   = 907724
 
-Test 049 rap_2threads PASS
+Test 053 rap_2threads PASS
 
 
-baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20220613/INTEL/rap_control
-working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/FV3_RT/rt_173298/rap_restart
-Checking test 050 rap_restart results ....
+baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20221005/INTEL/rap_control
+working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/SD_RT/rt_31266/rap_restart
+Checking test 054 rap_restart results ....
  Comparing sfcf012.nc .........OK
  Comparing atmf012.nc .........OK
  Comparing GFSFLX.GrbF12 .........OK
@@ -1971,15 +2035,15 @@ Checking test 050 rap_restart results ....
  Comparing RESTART/sfc_data.tile5.nc .........OK
  Comparing RESTART/sfc_data.tile6.nc .........OK
 
-  0: The total amount of wall time                        = 328.901029
-  0: The maximum resident set size (KB)                   = 595156
+  0: The total amount of wall time                        = 325.543515
+  0: The maximum resident set size (KB)                   = 595964
 
-Test 050 rap_restart PASS
+Test 054 rap_restart PASS
 
 
-baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20220613/INTEL/rap_sfcdiff
-working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/FV3_RT/rt_173298/rap_sfcdiff
-Checking test 051 rap_sfcdiff results ....
+baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20221005/INTEL/rap_sfcdiff
+working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/SD_RT/rt_31266/rap_sfcdiff
+Checking test 055 rap_sfcdiff results ....
  Comparing sfcf000.nc .........OK
  Comparing sfcf009.nc .........OK
  Comparing sfcf012.nc .........OK
@@ -2025,15 +2089,15 @@ Checking test 051 rap_sfcdiff results ....
  Comparing RESTART/sfc_data.tile5.nc .........OK
  Comparing RESTART/sfc_data.tile6.nc .........OK
 
-  0: The total amount of wall time                        = 444.804918
-  0: The maximum resident set size (KB)                   = 842684
+  0: The total amount of wall time                        = 449.016966
+  0: The maximum resident set size (KB)                   = 842276
 
-Test 051 rap_sfcdiff PASS
+Test 055 rap_sfcdiff PASS
 
 
-baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20220613/INTEL/rap_sfcdiff
-working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/FV3_RT/rt_173298/rap_sfcdiff_decomp
-Checking test 052 rap_sfcdiff_decomp results ....
+baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20221005/INTEL/rap_sfcdiff
+working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/SD_RT/rt_31266/rap_sfcdiff_decomp
+Checking test 056 rap_sfcdiff_decomp results ....
  Comparing sfcf000.nc .........OK
  Comparing sfcf009.nc .........OK
  Comparing sfcf012.nc .........OK
@@ -2079,15 +2143,15 @@ Checking test 052 rap_sfcdiff_decomp results ....
  Comparing RESTART/sfc_data.tile5.nc .........OK
  Comparing RESTART/sfc_data.tile6.nc .........OK
 
-  0: The total amount of wall time                        = 463.671395
-  0: The maximum resident set size (KB)                   = 842572
+  0: The total amount of wall time                        = 458.314951
+  0: The maximum resident set size (KB)                   = 843108
 
-Test 052 rap_sfcdiff_decomp PASS
+Test 056 rap_sfcdiff_decomp PASS
 
 
-baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20220613/INTEL/rap_sfcdiff
-working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/FV3_RT/rt_173298/rap_sfcdiff_restart
-Checking test 053 rap_sfcdiff_restart results ....
+baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20221005/INTEL/rap_sfcdiff
+working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/SD_RT/rt_31266/rap_sfcdiff_restart
+Checking test 057 rap_sfcdiff_restart results ....
  Comparing sfcf012.nc .........OK
  Comparing atmf012.nc .........OK
  Comparing GFSFLX.GrbF12 .........OK
@@ -2125,15 +2189,15 @@ Checking test 053 rap_sfcdiff_restart results ....
  Comparing RESTART/sfc_data.tile5.nc .........OK
  Comparing RESTART/sfc_data.tile6.nc .........OK
 
-  0: The total amount of wall time                        = 336.840704
-  0: The maximum resident set size (KB)                   = 598624
+  0: The total amount of wall time                        = 334.827160
+  0: The maximum resident set size (KB)                   = 593556
 
-Test 053 rap_sfcdiff_restart PASS
+Test 057 rap_sfcdiff_restart PASS
 
 
-baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20220613/INTEL/hrrr_control
-working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/FV3_RT/rt_173298/hrrr_control
-Checking test 054 hrrr_control results ....
+baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20221005/INTEL/hrrr_control
+working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/SD_RT/rt_31266/hrrr_control
+Checking test 058 hrrr_control results ....
  Comparing sfcf000.nc .........OK
  Comparing sfcf009.nc .........OK
  Comparing sfcf012.nc .........OK
@@ -2179,15 +2243,15 @@ Checking test 054 hrrr_control results ....
  Comparing RESTART/sfc_data.tile5.nc .........OK
  Comparing RESTART/sfc_data.tile6.nc .........OK
 
-  0: The total amount of wall time                        = 433.425403
-  0: The maximum resident set size (KB)                   = 839708
+  0: The total amount of wall time                        = 432.890274
+  0: The maximum resident set size (KB)                   = 846200
 
-Test 054 hrrr_control PASS
+Test 058 hrrr_control PASS
 
 
-baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20220613/INTEL/hrrr_control
-working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/FV3_RT/rt_173298/hrrr_control_decomp
-Checking test 055 hrrr_control_decomp results ....
+baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20221005/INTEL/hrrr_control
+working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/SD_RT/rt_31266/hrrr_control_decomp
+Checking test 059 hrrr_control_decomp results ....
  Comparing sfcf000.nc .........OK
  Comparing sfcf009.nc .........OK
  Comparing sfcf012.nc .........OK
@@ -2233,15 +2297,15 @@ Checking test 055 hrrr_control_decomp results ....
  Comparing RESTART/sfc_data.tile5.nc .........OK
  Comparing RESTART/sfc_data.tile6.nc .........OK
 
-  0: The total amount of wall time                        = 446.609000
-  0: The maximum resident set size (KB)                   = 838588
+  0: The total amount of wall time                        = 447.711383
+  0: The maximum resident set size (KB)                   = 838552
 
-Test 055 hrrr_control_decomp PASS
+Test 059 hrrr_control_decomp PASS
 
 
-baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20220613/INTEL/hrrr_control
-working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/FV3_RT/rt_173298/hrrr_control_2threads
-Checking test 056 hrrr_control_2threads results ....
+baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20221005/INTEL/hrrr_control
+working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/SD_RT/rt_31266/hrrr_control_2threads
+Checking test 060 hrrr_control_2threads results ....
  Comparing sfcf000.nc .........OK
  Comparing sfcf009.nc .........OK
  Comparing sfcf012.nc .........OK
@@ -2287,15 +2351,15 @@ Checking test 056 hrrr_control_2threads results ....
  Comparing RESTART/sfc_data.tile5.nc .........OK
  Comparing RESTART/sfc_data.tile6.nc .........OK
 
- 0: The total amount of wall time                        = 489.790354
- 0: The maximum resident set size (KB)                   = 900164
+ 0: The total amount of wall time                        = 488.923280
+ 0: The maximum resident set size (KB)                   = 903240
 
-Test 056 hrrr_control_2threads PASS
+Test 060 hrrr_control_2threads PASS
 
 
-baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20220613/INTEL/hrrr_control
-working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/FV3_RT/rt_173298/hrrr_control_restart
-Checking test 057 hrrr_control_restart results ....
+baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20221005/INTEL/hrrr_control
+working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/SD_RT/rt_31266/hrrr_control_restart
+Checking test 061 hrrr_control_restart results ....
  Comparing sfcf012.nc .........OK
  Comparing atmf012.nc .........OK
  Comparing GFSFLX.GrbF12 .........OK
@@ -2333,15 +2397,15 @@ Checking test 057 hrrr_control_restart results ....
  Comparing RESTART/sfc_data.tile5.nc .........OK
  Comparing RESTART/sfc_data.tile6.nc .........OK
 
-  0: The total amount of wall time                        = 323.686900
-  0: The maximum resident set size (KB)                   = 589080
+  0: The total amount of wall time                        = 322.158605
+  0: The maximum resident set size (KB)                   = 592072
 
-Test 057 hrrr_control_restart PASS
+Test 061 hrrr_control_restart PASS
 
 
-baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20220613/INTEL/rrfs_v1beta
-working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/FV3_RT/rt_173298/rrfs_v1beta
-Checking test 058 rrfs_v1beta results ....
+baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20221005/INTEL/rrfs_v1beta
+working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/SD_RT/rt_31266/rrfs_v1beta
+Checking test 062 rrfs_v1beta results ....
  Comparing sfcf000.nc .........OK
  Comparing sfcf009.nc .........OK
  Comparing sfcf012.nc .........OK
@@ -2387,15 +2451,15 @@ Checking test 058 rrfs_v1beta results ....
  Comparing RESTART/sfc_data.tile5.nc .........OK
  Comparing RESTART/sfc_data.tile6.nc .........OK
 
-  0: The total amount of wall time                        = 438.341917
-  0: The maximum resident set size (KB)                   = 834840
+  0: The total amount of wall time                        = 435.749913
+  0: The maximum resident set size (KB)                   = 833812
 
-Test 058 rrfs_v1beta PASS
+Test 062 rrfs_v1beta PASS
 
 
-baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20220613/INTEL/rrfs_v1nssl
-working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/FV3_RT/rt_173298/rrfs_v1nssl
-Checking test 059 rrfs_v1nssl results ....
+baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20221005/INTEL/rrfs_v1nssl
+working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/SD_RT/rt_31266/rrfs_v1nssl
+Checking test 063 rrfs_v1nssl results ....
  Comparing sfcf000.nc .........OK
  Comparing sfcf009.nc .........OK
  Comparing sfcf012.nc .........OK
@@ -2409,15 +2473,15 @@ Checking test 059 rrfs_v1nssl results ....
  Comparing GFSPRS.GrbF09 .........OK
  Comparing GFSPRS.GrbF12 .........OK
 
-  0: The total amount of wall time                        = 466.882965
-  0: The maximum resident set size (KB)                   = 526420
+  0: The total amount of wall time                        = 473.704330
+  0: The maximum resident set size (KB)                   = 528832
 
-Test 059 rrfs_v1nssl PASS
+Test 063 rrfs_v1nssl PASS
 
 
-baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20220613/INTEL/rrfs_v1nssl_nohailnoccn
-working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/FV3_RT/rt_173298/rrfs_v1nssl_nohailnoccn
-Checking test 060 rrfs_v1nssl_nohailnoccn results ....
+baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20221005/INTEL/rrfs_v1nssl_nohailnoccn
+working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/SD_RT/rt_31266/rrfs_v1nssl_nohailnoccn
+Checking test 064 rrfs_v1nssl_nohailnoccn results ....
  Comparing sfcf000.nc .........OK
  Comparing sfcf021.nc .........OK
  Comparing sfcf024.nc .........OK
@@ -2431,15 +2495,15 @@ Checking test 060 rrfs_v1nssl_nohailnoccn results ....
  Comparing GFSPRS.GrbF21 .........OK
  Comparing GFSPRS.GrbF24 .........OK
 
-  0: The total amount of wall time                        = 467.121233
-  0: The maximum resident set size (KB)                   = 519768
+  0: The total amount of wall time                        = 458.043307
+  0: The maximum resident set size (KB)                   = 517492
 
-Test 060 rrfs_v1nssl_nohailnoccn PASS
+Test 064 rrfs_v1nssl_nohailnoccn PASS
 
 
-baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20220613/INTEL/rrfs_conus13km_hrrr_warm
-working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/FV3_RT/rt_173298/rrfs_conus13km_hrrr_warm
-Checking test 061 rrfs_conus13km_hrrr_warm results ....
+baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20221005/INTEL/rrfs_conus13km_hrrr_warm
+working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/SD_RT/rt_31266/rrfs_conus13km_hrrr_warm
+Checking test 065 rrfs_conus13km_hrrr_warm results ....
  Comparing sfcf000.nc .........OK
  Comparing sfcf001.nc .........OK
  Comparing sfcf002.nc .........OK
@@ -2447,15 +2511,15 @@ Checking test 061 rrfs_conus13km_hrrr_warm results ....
  Comparing atmf001.nc .........OK
  Comparing atmf002.nc .........OK
 
-  0: The total amount of wall time                        = 189.543308
-  0: The maximum resident set size (KB)                   = 700304
+  0: The total amount of wall time                        = 145.941225
+  0: The maximum resident set size (KB)                   = 720832
 
-Test 061 rrfs_conus13km_hrrr_warm PASS
+Test 065 rrfs_conus13km_hrrr_warm PASS
 
 
-baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20220613/INTEL/rrfs_conus13km_radar_tten_warm
-working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/FV3_RT/rt_173298/rrfs_conus13km_radar_tten_warm
-Checking test 062 rrfs_conus13km_radar_tten_warm results ....
+baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20221005/INTEL/rrfs_conus13km_radar_tten_warm
+working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/SD_RT/rt_31266/rrfs_conus13km_radar_tten_warm
+Checking test 066 rrfs_conus13km_radar_tten_warm results ....
  Comparing sfcf000.nc .........OK
  Comparing sfcf001.nc .........OK
  Comparing sfcf002.nc .........OK
@@ -2463,15 +2527,15 @@ Checking test 062 rrfs_conus13km_radar_tten_warm results ....
  Comparing atmf001.nc .........OK
  Comparing atmf002.nc .........OK
 
-  0: The total amount of wall time                        = 194.792294
-  0: The maximum resident set size (KB)                   = 701764
+  0: The total amount of wall time                        = 145.706710
+  0: The maximum resident set size (KB)                   = 722528
 
-Test 062 rrfs_conus13km_radar_tten_warm PASS
+Test 066 rrfs_conus13km_radar_tten_warm PASS
 
 
-baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20220613/INTEL/rrfs_smoke_conus13km_hrrr_warm
-working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/FV3_RT/rt_173298/rrfs_smoke_conus13km_hrrr_warm
-Checking test 063 rrfs_smoke_conus13km_hrrr_warm results ....
+baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20221005/INTEL/rrfs_smoke_conus13km_hrrr_warm
+working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/SD_RT/rt_31266/rrfs_smoke_conus13km_hrrr_warm
+Checking test 067 rrfs_smoke_conus13km_hrrr_warm results ....
  Comparing sfcf000.nc .........OK
  Comparing sfcf001.nc .........OK
  Comparing sfcf002.nc .........OK
@@ -2479,15 +2543,31 @@ Checking test 063 rrfs_smoke_conus13km_hrrr_warm results ....
  Comparing atmf001.nc .........OK
  Comparing atmf002.nc .........OK
 
-  0: The total amount of wall time                        = 204.515292
-  0: The maximum resident set size (KB)                   = 710576
+  0: The total amount of wall time                        = 159.426073
+  0: The maximum resident set size (KB)                   = 737068
 
-Test 063 rrfs_smoke_conus13km_hrrr_warm PASS
+Test 067 rrfs_smoke_conus13km_hrrr_warm PASS
 
 
-baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20220613/INTEL/control_csawmg
-working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/FV3_RT/rt_173298/control_csawmg
-Checking test 064 control_csawmg results ....
+baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20221005/INTEL/rrfs_smoke_conus13km_radar_tten_warm
+working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/SD_RT/rt_31266/rrfs_smoke_conus13km_radar_tten_warm
+Checking test 068 rrfs_smoke_conus13km_radar_tten_warm results ....
+ Comparing sfcf000.nc .........OK
+ Comparing sfcf001.nc .........OK
+ Comparing sfcf002.nc .........OK
+ Comparing atmf000.nc .........OK
+ Comparing atmf001.nc .........OK
+ Comparing atmf002.nc .........OK
+
+  0: The total amount of wall time                        = 156.743284
+  0: The maximum resident set size (KB)                   = 740644
+
+Test 068 rrfs_smoke_conus13km_radar_tten_warm PASS
+
+
+baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20221005/INTEL/control_csawmg
+working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/SD_RT/rt_31266/control_csawmg
+Checking test 069 control_csawmg results ....
  Comparing sfcf000.nc .........OK
  Comparing sfcf024.nc .........OK
  Comparing atmf000.nc .........OK
@@ -2497,15 +2577,15 @@ Checking test 064 control_csawmg results ....
  Comparing GFSPRS.GrbF00 .........OK
  Comparing GFSPRS.GrbF24 .........OK
 
-  0: The total amount of wall time                        = 325.459420
-  0: The maximum resident set size (KB)                   = 534664
+  0: The total amount of wall time                        = 326.543861
+  0: The maximum resident set size (KB)                   = 536644
 
-Test 064 control_csawmg PASS
+Test 069 control_csawmg PASS
 
 
-baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20220613/INTEL/control_csawmgt
-working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/FV3_RT/rt_173298/control_csawmgt
-Checking test 065 control_csawmgt results ....
+baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20221005/INTEL/control_csawmgt
+working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/SD_RT/rt_31266/control_csawmgt
+Checking test 070 control_csawmgt results ....
  Comparing sfcf000.nc .........OK
  Comparing sfcf024.nc .........OK
  Comparing atmf000.nc .........OK
@@ -2515,15 +2595,15 @@ Checking test 065 control_csawmgt results ....
  Comparing GFSPRS.GrbF00 .........OK
  Comparing GFSPRS.GrbF24 .........OK
 
-  0: The total amount of wall time                        = 325.486262
-  0: The maximum resident set size (KB)                   = 537112
+  0: The total amount of wall time                        = 330.421667
+  0: The maximum resident set size (KB)                   = 534272
 
-Test 065 control_csawmgt PASS
+Test 070 control_csawmgt PASS
 
 
-baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20220613/INTEL/control_flake
-working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/FV3_RT/rt_173298/control_flake
-Checking test 066 control_flake results ....
+baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20221005/INTEL/control_flake
+working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/SD_RT/rt_31266/control_flake
+Checking test 071 control_flake results ....
  Comparing sfcf000.nc .........OK
  Comparing sfcf024.nc .........OK
  Comparing atmf000.nc .........OK
@@ -2533,15 +2613,15 @@ Checking test 066 control_flake results ....
  Comparing GFSPRS.GrbF00 .........OK
  Comparing GFSPRS.GrbF24 .........OK
 
-  0: The total amount of wall time                        = 232.284058
-  0: The maximum resident set size (KB)                   = 536320
+  0: The total amount of wall time                        = 237.711175
+  0: The maximum resident set size (KB)                   = 535492
 
-Test 066 control_flake PASS
+Test 071 control_flake PASS
 
 
-baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20220613/INTEL/control_ras
-working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/FV3_RT/rt_173298/control_ras
-Checking test 067 control_ras results ....
+baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20221005/INTEL/control_ras
+working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/SD_RT/rt_31266/control_ras
+Checking test 072 control_ras results ....
  Comparing sfcf000.nc .........OK
  Comparing sfcf024.nc .........OK
  Comparing atmf000.nc .........OK
@@ -2551,15 +2631,15 @@ Checking test 067 control_ras results ....
  Comparing GFSPRS.GrbF00 .........OK
  Comparing GFSPRS.GrbF24 .........OK
 
-  0: The total amount of wall time                        = 174.442600
-  0: The maximum resident set size (KB)                   = 494516
+  0: The total amount of wall time                        = 177.068944
+  0: The maximum resident set size (KB)                   = 498612
 
-Test 067 control_ras PASS
+Test 072 control_ras PASS
 
 
-baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20220613/INTEL/control_thompson
-working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/FV3_RT/rt_173298/control_thompson
-Checking test 068 control_thompson results ....
+baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20221005/INTEL/control_thompson
+working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/SD_RT/rt_31266/control_thompson
+Checking test 073 control_thompson results ....
  Comparing sfcf000.nc .........OK
  Comparing sfcf024.nc .........OK
  Comparing atmf000.nc .........OK
@@ -2569,15 +2649,15 @@ Checking test 068 control_thompson results ....
  Comparing GFSPRS.GrbF00 .........OK
  Comparing GFSPRS.GrbF24 .........OK
 
-  0: The total amount of wall time                        = 231.657748
-  0: The maximum resident set size (KB)                   = 852856
+  0: The total amount of wall time                        = 235.077852
+  0: The maximum resident set size (KB)                   = 850688
 
-Test 068 control_thompson PASS
+Test 073 control_thompson PASS
 
 
-baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20220613/INTEL/control_thompson_no_aero
-working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/FV3_RT/rt_173298/control_thompson_no_aero
-Checking test 069 control_thompson_no_aero results ....
+baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20221005/INTEL/control_thompson_no_aero
+working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/SD_RT/rt_31266/control_thompson_no_aero
+Checking test 074 control_thompson_no_aero results ....
  Comparing sfcf000.nc .........OK
  Comparing sfcf024.nc .........OK
  Comparing atmf000.nc .........OK
@@ -2587,55 +2667,55 @@ Checking test 069 control_thompson_no_aero results ....
  Comparing GFSPRS.GrbF00 .........OK
  Comparing GFSPRS.GrbF24 .........OK
 
-  0: The total amount of wall time                        = 224.424929
-  0: The maximum resident set size (KB)                   = 845620
+  0: The total amount of wall time                        = 218.322648
+  0: The maximum resident set size (KB)                   = 844452
 
-Test 069 control_thompson_no_aero PASS
+Test 074 control_thompson_no_aero PASS
 
 
-baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20220613/INTEL/control_wam
-working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/FV3_RT/rt_173298/control_wam
-Checking test 070 control_wam results ....
+baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20221005/INTEL/control_wam
+working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/SD_RT/rt_31266/control_wam
+Checking test 075 control_wam results ....
  Comparing sfcf024.nc .........OK
  Comparing atmf024.nc .........OK
 
-  0: The total amount of wall time                        = 104.252161
-  0: The maximum resident set size (KB)                   = 235672
+  0: The total amount of wall time                        = 102.568573
+  0: The maximum resident set size (KB)                   = 233676
 
-Test 070 control_wam PASS
+Test 075 control_wam PASS
 
 
-baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20220613/INTEL/control_debug
-working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/FV3_RT/rt_173298/control_debug
-Checking test 071 control_debug results ....
+baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20221005/INTEL/control_debug
+working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/SD_RT/rt_31266/control_debug
+Checking test 076 control_debug results ....
  Comparing sfcf000.nc .........OK
  Comparing sfcf001.nc .........OK
  Comparing atmf000.nc .........OK
  Comparing atmf001.nc .........OK
 
-  0: The total amount of wall time                        = 142.896714
-  0: The maximum resident set size (KB)                   = 632296
+  0: The total amount of wall time                        = 148.134070
+  0: The maximum resident set size (KB)                   = 628668
 
-Test 071 control_debug PASS
+Test 076 control_debug PASS
 
 
-baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20220613/INTEL/control_debug
-working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/FV3_RT/rt_173298/control_2threads_debug
-Checking test 072 control_2threads_debug results ....
+baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20221005/INTEL/control_debug
+working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/SD_RT/rt_31266/control_2threads_debug
+Checking test 077 control_2threads_debug results ....
  Comparing sfcf000.nc .........OK
  Comparing sfcf001.nc .........OK
  Comparing atmf000.nc .........OK
  Comparing atmf001.nc .........OK
 
- 0: The total amount of wall time                        = 218.509882
- 0: The maximum resident set size (KB)                   = 681804
+ 0: The total amount of wall time                        = 218.914675
+ 0: The maximum resident set size (KB)                   = 677868
 
-Test 072 control_2threads_debug PASS
+Test 077 control_2threads_debug PASS
 
 
-baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20220613/INTEL/control_CubedSphereGrid_debug
-working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/FV3_RT/rt_173298/control_CubedSphereGrid_debug
-Checking test 073 control_CubedSphereGrid_debug results ....
+baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20221005/INTEL/control_CubedSphereGrid_debug
+working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/SD_RT/rt_31266/control_CubedSphereGrid_debug
+Checking test 078 control_CubedSphereGrid_debug results ....
  Comparing sfcf000.tile1.nc .........OK
  Comparing sfcf000.tile2.nc .........OK
  Comparing sfcf000.tile3.nc .........OK
@@ -2661,416 +2741,416 @@ Checking test 073 control_CubedSphereGrid_debug results ....
  Comparing atmf001.tile5.nc .........OK
  Comparing atmf001.tile6.nc .........OK
 
-  0: The total amount of wall time                        = 158.736858
-  0: The maximum resident set size (KB)                   = 632572
+  0: The total amount of wall time                        = 157.747901
+  0: The maximum resident set size (KB)                   = 630176
 
-Test 073 control_CubedSphereGrid_debug PASS
+Test 078 control_CubedSphereGrid_debug PASS
 
 
-baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20220613/INTEL/control_wrtGauss_netcdf_parallel_debug
-working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/FV3_RT/rt_173298/control_wrtGauss_netcdf_parallel_debug
-Checking test 074 control_wrtGauss_netcdf_parallel_debug results ....
+baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20221005/INTEL/control_wrtGauss_netcdf_parallel_debug
+working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/SD_RT/rt_31266/control_wrtGauss_netcdf_parallel_debug
+Checking test 079 control_wrtGauss_netcdf_parallel_debug results ....
  Comparing sfcf000.nc .........OK
  Comparing sfcf001.nc ............ALT CHECK......OK
  Comparing atmf000.nc .........OK
  Comparing atmf001.nc .........OK
 
-  0: The total amount of wall time                        = 146.242537
-  0: The maximum resident set size (KB)                   = 628916
+  0: The total amount of wall time                        = 149.659465
+  0: The maximum resident set size (KB)                   = 632180
 
-Test 074 control_wrtGauss_netcdf_parallel_debug PASS
+Test 079 control_wrtGauss_netcdf_parallel_debug PASS
 
 
-baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20220613/INTEL/control_stochy_debug
-working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/FV3_RT/rt_173298/control_stochy_debug
-Checking test 075 control_stochy_debug results ....
+baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20221005/INTEL/control_stochy_debug
+working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/SD_RT/rt_31266/control_stochy_debug
+Checking test 080 control_stochy_debug results ....
  Comparing sfcf000.nc .........OK
  Comparing sfcf001.nc .........OK
  Comparing atmf000.nc .........OK
  Comparing atmf001.nc .........OK
 
-  0: The total amount of wall time                        = 166.028260
-  0: The maximum resident set size (KB)                   = 637320
+  0: The total amount of wall time                        = 166.056119
+  0: The maximum resident set size (KB)                   = 636720
 
-Test 075 control_stochy_debug PASS
+Test 080 control_stochy_debug PASS
 
 
-baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20220613/INTEL/control_lndp_debug
-working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/FV3_RT/rt_173298/control_lndp_debug
-Checking test 076 control_lndp_debug results ....
+baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20221005/INTEL/control_lndp_debug
+working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/SD_RT/rt_31266/control_lndp_debug
+Checking test 081 control_lndp_debug results ....
  Comparing sfcf000.nc .........OK
  Comparing sfcf001.nc .........OK
  Comparing atmf000.nc .........OK
  Comparing atmf001.nc .........OK
 
-  0: The total amount of wall time                        = 148.864587
-  0: The maximum resident set size (KB)                   = 640464
+  0: The total amount of wall time                        = 149.500725
+  0: The maximum resident set size (KB)                   = 634468
 
-Test 076 control_lndp_debug PASS
+Test 081 control_lndp_debug PASS
 
 
-baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20220613/INTEL/control_csawmg_debug
-working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/FV3_RT/rt_173298/control_csawmg_debug
-Checking test 077 control_csawmg_debug results ....
+baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20221005/INTEL/control_csawmg_debug
+working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/SD_RT/rt_31266/control_csawmg_debug
+Checking test 082 control_csawmg_debug results ....
  Comparing sfcf000.nc .........OK
  Comparing sfcf001.nc .........OK
  Comparing atmf000.nc .........OK
  Comparing atmf001.nc .........OK
 
-  0: The total amount of wall time                        = 223.218409
-  0: The maximum resident set size (KB)                   = 679548
+  0: The total amount of wall time                        = 225.732858
+  0: The maximum resident set size (KB)                   = 677792
 
-Test 077 control_csawmg_debug PASS
+Test 082 control_csawmg_debug PASS
 
 
-baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20220613/INTEL/control_csawmgt_debug
-working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/FV3_RT/rt_173298/control_csawmgt_debug
-Checking test 078 control_csawmgt_debug results ....
+baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20221005/INTEL/control_csawmgt_debug
+working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/SD_RT/rt_31266/control_csawmgt_debug
+Checking test 083 control_csawmgt_debug results ....
  Comparing sfcf000.nc .........OK
  Comparing sfcf001.nc .........OK
  Comparing atmf000.nc .........OK
  Comparing atmf001.nc .........OK
 
-  0: The total amount of wall time                        = 224.113047
-  0: The maximum resident set size (KB)                   = 676924
+  0: The total amount of wall time                        = 220.622372
+  0: The maximum resident set size (KB)                   = 679032
 
-Test 078 control_csawmgt_debug PASS
+Test 083 control_csawmgt_debug PASS
 
 
-baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20220613/INTEL/control_ras_debug
-working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/FV3_RT/rt_173298/control_ras_debug
-Checking test 079 control_ras_debug results ....
+baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20221005/INTEL/control_ras_debug
+working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/SD_RT/rt_31266/control_ras_debug
+Checking test 084 control_ras_debug results ....
  Comparing sfcf000.nc .........OK
  Comparing sfcf001.nc .........OK
  Comparing atmf000.nc .........OK
  Comparing atmf001.nc .........OK
 
-  0: The total amount of wall time                        = 150.824314
-  0: The maximum resident set size (KB)                   = 646904
+  0: The total amount of wall time                        = 150.964084
+  0: The maximum resident set size (KB)                   = 645136
 
-Test 079 control_ras_debug PASS
+Test 084 control_ras_debug PASS
 
 
-baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20220613/INTEL/control_diag_debug
-working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/FV3_RT/rt_173298/control_diag_debug
-Checking test 080 control_diag_debug results ....
+baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20221005/INTEL/control_diag_debug
+working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/SD_RT/rt_31266/control_diag_debug
+Checking test 085 control_diag_debug results ....
  Comparing sfcf000.nc .........OK
  Comparing sfcf001.nc .........OK
  Comparing atmf000.nc .........OK
  Comparing atmf001.nc .........OK
 
-  0: The total amount of wall time                        = 153.943355
-  0: The maximum resident set size (KB)                   = 689104
+  0: The total amount of wall time                        = 155.450823
+  0: The maximum resident set size (KB)                   = 687608
 
-Test 080 control_diag_debug PASS
+Test 085 control_diag_debug PASS
 
 
-baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20220613/INTEL/control_debug_p8
-working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/FV3_RT/rt_173298/control_debug_p8
-Checking test 081 control_debug_p8 results ....
+baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20221005/INTEL/control_debug_p8
+working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/SD_RT/rt_31266/control_debug_p8
+Checking test 086 control_debug_p8 results ....
  Comparing sfcf000.nc .........OK
  Comparing sfcf001.nc .........OK
  Comparing atmf000.nc .........OK
  Comparing atmf001.nc .........OK
 
-  0: The total amount of wall time                        = 168.686862
-  0: The maximum resident set size (KB)                   = 1020836
+  0: The total amount of wall time                        = 163.581744
+  0: The maximum resident set size (KB)                   = 1021132
 
-Test 081 control_debug_p8 PASS
+Test 086 control_debug_p8 PASS
 
 
-baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20220613/INTEL/control_thompson_debug
-working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/FV3_RT/rt_173298/control_thompson_debug
-Checking test 082 control_thompson_debug results ....
+baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20221005/INTEL/control_thompson_debug
+working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/SD_RT/rt_31266/control_thompson_debug
+Checking test 087 control_thompson_debug results ....
  Comparing sfcf000.nc .........OK
  Comparing sfcf001.nc .........OK
  Comparing atmf000.nc .........OK
  Comparing atmf001.nc .........OK
 
-  0: The total amount of wall time                        = 173.824769
-  0: The maximum resident set size (KB)                   = 994064
+  0: The total amount of wall time                        = 171.682763
+  0: The maximum resident set size (KB)                   = 996660
 
-Test 082 control_thompson_debug PASS
+Test 087 control_thompson_debug PASS
 
 
-baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20220613/INTEL/control_thompson_no_aero_debug
-working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/FV3_RT/rt_173298/control_thompson_no_aero_debug
-Checking test 083 control_thompson_no_aero_debug results ....
+baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20221005/INTEL/control_thompson_no_aero_debug
+working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/SD_RT/rt_31266/control_thompson_no_aero_debug
+Checking test 088 control_thompson_no_aero_debug results ....
  Comparing sfcf000.nc .........OK
  Comparing sfcf001.nc .........OK
  Comparing atmf000.nc .........OK
  Comparing atmf001.nc .........OK
 
-  0: The total amount of wall time                        = 168.375188
-  0: The maximum resident set size (KB)                   = 991052
+  0: The total amount of wall time                        = 164.826287
+  0: The maximum resident set size (KB)                   = 990320
 
-Test 083 control_thompson_no_aero_debug PASS
+Test 088 control_thompson_no_aero_debug PASS
 
 
-baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20220613/INTEL/control_thompson_debug_extdiag
-working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/FV3_RT/rt_173298/control_thompson_extdiag_debug
-Checking test 084 control_thompson_extdiag_debug results ....
+baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20221005/INTEL/control_thompson_debug_extdiag
+working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/SD_RT/rt_31266/control_thompson_extdiag_debug
+Checking test 089 control_thompson_extdiag_debug results ....
  Comparing sfcf000.nc .........OK
  Comparing sfcf001.nc .........OK
  Comparing atmf000.nc .........OK
  Comparing atmf001.nc .........OK
 
-  0: The total amount of wall time                        = 182.521117
-  0: The maximum resident set size (KB)                   = 1027884
+  0: The total amount of wall time                        = 184.049398
+  0: The maximum resident set size (KB)                   = 1024944
 
-Test 084 control_thompson_extdiag_debug PASS
+Test 089 control_thompson_extdiag_debug PASS
 
 
-baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20220613/INTEL/control_thompson_progcld_thompson_debug
-working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/FV3_RT/rt_173298/control_thompson_progcld_thompson_debug
-Checking test 085 control_thompson_progcld_thompson_debug results ....
+baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20221005/INTEL/control_thompson_progcld_thompson_debug
+working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/SD_RT/rt_31266/control_thompson_progcld_thompson_debug
+Checking test 090 control_thompson_progcld_thompson_debug results ....
  Comparing sfcf000.nc .........OK
  Comparing sfcf001.nc .........OK
  Comparing atmf000.nc .........OK
  Comparing atmf001.nc .........OK
 
-  0: The total amount of wall time                        = 170.867699
-  0: The maximum resident set size (KB)                   = 993860
+  0: The total amount of wall time                        = 171.075677
+  0: The maximum resident set size (KB)                   = 993376
 
-Test 085 control_thompson_progcld_thompson_debug PASS
+Test 090 control_thompson_progcld_thompson_debug PASS
 
 
-baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20220613/INTEL/fv3_regional_debug
-working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/FV3_RT/rt_173298/regional_debug
-Checking test 086 regional_debug results ....
+baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20221005/INTEL/fv3_regional_debug
+working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/SD_RT/rt_31266/regional_debug
+Checking test 091 regional_debug results ....
  Comparing dynf000.nc .........OK
  Comparing dynf001.nc .........OK
  Comparing phyf000.nc .........OK
  Comparing phyf001.nc .........OK
 
- 0: The total amount of wall time                        = 240.906509
- 0: The maximum resident set size (KB)                   = 610508
+ 0: The total amount of wall time                        = 235.757078
+ 0: The maximum resident set size (KB)                   = 608876
 
-Test 086 regional_debug PASS
+Test 091 regional_debug PASS
 
 
-baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20220613/INTEL/rap_control_debug
-working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/FV3_RT/rt_173298/rap_control_debug
-Checking test 087 rap_control_debug results ....
+baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20221005/INTEL/rap_control_debug
+working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/SD_RT/rt_31266/rap_control_debug
+Checking test 092 rap_control_debug results ....
  Comparing sfcf000.nc .........OK
  Comparing sfcf001.nc .........OK
  Comparing atmf000.nc .........OK
  Comparing atmf001.nc .........OK
 
-  0: The total amount of wall time                        = 267.189928
-  0: The maximum resident set size (KB)                   = 999256
+  0: The total amount of wall time                        = 262.748358
+  0: The maximum resident set size (KB)                   = 1003788
 
-Test 087 rap_control_debug PASS
+Test 092 rap_control_debug PASS
 
 
-baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20220613/INTEL/rap_control_debug
-working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/FV3_RT/rt_173298/rap_unified_drag_suite_debug
-Checking test 088 rap_unified_drag_suite_debug results ....
+baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20221005/INTEL/rap_control_debug
+working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/SD_RT/rt_31266/rap_unified_drag_suite_debug
+Checking test 093 rap_unified_drag_suite_debug results ....
  Comparing sfcf000.nc .........OK
  Comparing sfcf001.nc .........OK
  Comparing atmf000.nc .........OK
  Comparing atmf001.nc .........OK
 
-  0: The total amount of wall time                        = 265.283276
-  0: The maximum resident set size (KB)                   = 1001428
+  0: The total amount of wall time                        = 266.800232
+  0: The maximum resident set size (KB)                   = 1001560
 
-Test 088 rap_unified_drag_suite_debug PASS
+Test 093 rap_unified_drag_suite_debug PASS
 
 
-baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20220613/INTEL/rap_diag_debug
-working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/FV3_RT/rt_173298/rap_diag_debug
-Checking test 089 rap_diag_debug results ....
+baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20221005/INTEL/rap_diag_debug
+working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/SD_RT/rt_31266/rap_diag_debug
+Checking test 094 rap_diag_debug results ....
  Comparing sfcf000.nc .........OK
  Comparing sfcf001.nc .........OK
  Comparing atmf000.nc .........OK
  Comparing atmf001.nc .........OK
 
-  0: The total amount of wall time                        = 280.229179
-  0: The maximum resident set size (KB)                   = 1085832
+  0: The total amount of wall time                        = 276.331057
+  0: The maximum resident set size (KB)                   = 1085636
 
-Test 089 rap_diag_debug PASS
+Test 094 rap_diag_debug PASS
 
 
-baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20220613/INTEL/rap_cires_ugwp_debug
-working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/FV3_RT/rt_173298/rap_cires_ugwp_debug
-Checking test 090 rap_cires_ugwp_debug results ....
+baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20221005/INTEL/rap_cires_ugwp_debug
+working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/SD_RT/rt_31266/rap_cires_ugwp_debug
+Checking test 095 rap_cires_ugwp_debug results ....
  Comparing sfcf000.nc .........OK
  Comparing sfcf001.nc .........OK
  Comparing atmf000.nc .........OK
  Comparing atmf001.nc .........OK
 
-  0: The total amount of wall time                        = 273.858097
-  0: The maximum resident set size (KB)                   = 998376
+  0: The total amount of wall time                        = 267.009992
+  0: The maximum resident set size (KB)                   = 997140
 
-Test 090 rap_cires_ugwp_debug PASS
+Test 095 rap_cires_ugwp_debug PASS
 
 
-baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20220613/INTEL/rap_cires_ugwp_debug
-working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/FV3_RT/rt_173298/rap_unified_ugwp_debug
-Checking test 091 rap_unified_ugwp_debug results ....
+baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20221005/INTEL/rap_cires_ugwp_debug
+working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/SD_RT/rt_31266/rap_unified_ugwp_debug
+Checking test 096 rap_unified_ugwp_debug results ....
  Comparing sfcf000.nc .........OK
  Comparing sfcf001.nc .........OK
  Comparing atmf000.nc .........OK
  Comparing atmf001.nc .........OK
 
-  0: The total amount of wall time                        = 269.852955
-  0: The maximum resident set size (KB)                   = 1003136
+  0: The total amount of wall time                        = 275.124554
+  0: The maximum resident set size (KB)                   = 1002616
 
-Test 091 rap_unified_ugwp_debug PASS
+Test 096 rap_unified_ugwp_debug PASS
 
 
-baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20220613/INTEL/rap_lndp_debug
-working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/FV3_RT/rt_173298/rap_lndp_debug
-Checking test 092 rap_lndp_debug results ....
+baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20221005/INTEL/rap_lndp_debug
+working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/SD_RT/rt_31266/rap_lndp_debug
+Checking test 097 rap_lndp_debug results ....
  Comparing sfcf000.nc .........OK
  Comparing sfcf001.nc .........OK
  Comparing atmf000.nc .........OK
  Comparing atmf001.nc .........OK
 
-  0: The total amount of wall time                        = 269.921281
-  0: The maximum resident set size (KB)                   = 1001264
+  0: The total amount of wall time                        = 265.348255
+  0: The maximum resident set size (KB)                   = 1006508
 
-Test 092 rap_lndp_debug PASS
+Test 097 rap_lndp_debug PASS
 
 
-baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20220613/INTEL/rap_flake_debug
-working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/FV3_RT/rt_173298/rap_flake_debug
-Checking test 093 rap_flake_debug results ....
+baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20221005/INTEL/rap_flake_debug
+working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/SD_RT/rt_31266/rap_flake_debug
+Checking test 098 rap_flake_debug results ....
  Comparing sfcf000.nc .........OK
  Comparing sfcf001.nc .........OK
  Comparing atmf000.nc .........OK
  Comparing atmf001.nc .........OK
 
-  0: The total amount of wall time                        = 264.529240
-  0: The maximum resident set size (KB)                   = 1004372
+  0: The total amount of wall time                        = 266.123761
+  0: The maximum resident set size (KB)                   = 1002192
 
-Test 093 rap_flake_debug PASS
+Test 098 rap_flake_debug PASS
 
 
-baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20220613/INTEL/rap_progcld_thompson_debug
-working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/FV3_RT/rt_173298/rap_progcld_thompson_debug
-Checking test 094 rap_progcld_thompson_debug results ....
+baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20221005/INTEL/rap_progcld_thompson_debug
+working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/SD_RT/rt_31266/rap_progcld_thompson_debug
+Checking test 099 rap_progcld_thompson_debug results ....
  Comparing sfcf000.nc .........OK
  Comparing sfcf001.nc .........OK
  Comparing atmf000.nc .........OK
  Comparing atmf001.nc .........OK
 
-  0: The total amount of wall time                        = 263.605153
-  0: The maximum resident set size (KB)                   = 1006164
+  0: The total amount of wall time                        = 266.593965
+  0: The maximum resident set size (KB)                   = 1003828
 
-Test 094 rap_progcld_thompson_debug PASS
+Test 099 rap_progcld_thompson_debug PASS
 
 
-baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20220613/INTEL/rap_noah_debug
-working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/FV3_RT/rt_173298/rap_noah_debug
-Checking test 095 rap_noah_debug results ....
+baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20221005/INTEL/rap_noah_debug
+working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/SD_RT/rt_31266/rap_noah_debug
+Checking test 100 rap_noah_debug results ....
  Comparing sfcf000.nc .........OK
  Comparing sfcf001.nc .........OK
  Comparing atmf000.nc .........OK
  Comparing atmf001.nc .........OK
 
-  0: The total amount of wall time                        = 259.476607
-  0: The maximum resident set size (KB)                   = 998908
+  0: The total amount of wall time                        = 260.152273
+  0: The maximum resident set size (KB)                   = 1000592
 
-Test 095 rap_noah_debug PASS
+Test 100 rap_noah_debug PASS
 
 
-baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20220613/INTEL/rap_rrtmgp_debug
-working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/FV3_RT/rt_173298/rap_rrtmgp_debug
-Checking test 096 rap_rrtmgp_debug results ....
+baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20221005/INTEL/rap_rrtmgp_debug
+working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/SD_RT/rt_31266/rap_rrtmgp_debug
+Checking test 101 rap_rrtmgp_debug results ....
  Comparing sfcf000.nc .........OK
  Comparing sfcf001.nc .........OK
  Comparing atmf000.nc .........OK
  Comparing atmf001.nc .........OK
 
-  0: The total amount of wall time                        = 448.174132
-  0: The maximum resident set size (KB)                   = 1123392
+  0: The total amount of wall time                        = 444.478734
+  0: The maximum resident set size (KB)                   = 1122540
 
-Test 096 rap_rrtmgp_debug PASS
+Test 101 rap_rrtmgp_debug PASS
 
 
-baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20220613/INTEL/rap_sfcdiff_debug
-working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/FV3_RT/rt_173298/rap_sfcdiff_debug
-Checking test 097 rap_sfcdiff_debug results ....
+baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20221005/INTEL/rap_sfcdiff_debug
+working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/SD_RT/rt_31266/rap_sfcdiff_debug
+Checking test 102 rap_sfcdiff_debug results ....
  Comparing sfcf000.nc .........OK
  Comparing sfcf001.nc .........OK
  Comparing atmf000.nc .........OK
  Comparing atmf001.nc .........OK
 
-  0: The total amount of wall time                        = 264.659925
-  0: The maximum resident set size (KB)                   = 999984
+  0: The total amount of wall time                        = 264.351692
+  0: The maximum resident set size (KB)                   = 1004176
 
-Test 097 rap_sfcdiff_debug PASS
+Test 102 rap_sfcdiff_debug PASS
 
 
-baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20220613/INTEL/rap_noah_sfcdiff_cires_ugwp_debug
-working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/FV3_RT/rt_173298/rap_noah_sfcdiff_cires_ugwp_debug
-Checking test 098 rap_noah_sfcdiff_cires_ugwp_debug results ....
+baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20221005/INTEL/rap_noah_sfcdiff_cires_ugwp_debug
+working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/SD_RT/rt_31266/rap_noah_sfcdiff_cires_ugwp_debug
+Checking test 103 rap_noah_sfcdiff_cires_ugwp_debug results ....
  Comparing sfcf000.nc .........OK
  Comparing sfcf001.nc .........OK
  Comparing atmf000.nc .........OK
  Comparing atmf001.nc .........OK
 
-  0: The total amount of wall time                        = 437.110462
-  0: The maximum resident set size (KB)                   = 1002308
+  0: The total amount of wall time                        = 443.351339
+  0: The maximum resident set size (KB)                   = 1006108
 
-Test 098 rap_noah_sfcdiff_cires_ugwp_debug PASS
+Test 103 rap_noah_sfcdiff_cires_ugwp_debug PASS
 
 
-baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20220613/INTEL/rrfs_v1beta_debug
-working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/FV3_RT/rt_173298/rrfs_v1beta_debug
-Checking test 099 rrfs_v1beta_debug results ....
+baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20221005/INTEL/rrfs_v1beta_debug
+working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/SD_RT/rt_31266/rrfs_v1beta_debug
+Checking test 104 rrfs_v1beta_debug results ....
  Comparing sfcf000.nc .........OK
  Comparing sfcf001.nc .........OK
  Comparing atmf000.nc .........OK
  Comparing atmf001.nc .........OK
 
-  0: The total amount of wall time                        = 261.564583
-  0: The maximum resident set size (KB)                   = 999692
+  0: The total amount of wall time                        = 263.212610
+  0: The maximum resident set size (KB)                   = 1000556
 
-Test 099 rrfs_v1beta_debug PASS
+Test 104 rrfs_v1beta_debug PASS
 
 
-baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20220613/INTEL/control_wam_debug
-working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/FV3_RT/rt_173298/control_wam_debug
-Checking test 100 control_wam_debug results ....
+baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20221005/INTEL/control_wam_debug
+working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/SD_RT/rt_31266/control_wam_debug
+Checking test 105 control_wam_debug results ....
  Comparing sfcf019.nc .........OK
  Comparing atmf019.nc .........OK
 
-  0: The total amount of wall time                        = 273.330820
-  0: The maximum resident set size (KB)                   = 261140
+  0: The total amount of wall time                        = 280.309082
+  0: The maximum resident set size (KB)                   = 260612
 
-Test 100 control_wam_debug PASS
+Test 105 control_wam_debug PASS
 
 
-baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20220613/INTEL/hafs_regional_atm
-working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/FV3_RT/rt_173298/hafs_regional_atm
-Checking test 101 hafs_regional_atm results ....
+baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20221005/INTEL/hafs_regional_atm
+working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/SD_RT/rt_31266/hafs_regional_atm
+Checking test 106 hafs_regional_atm results ....
  Comparing atmf006.nc .........OK
- Comparing sfcf006.nc .........OK
+ Comparing sfcf006.nc ............ALT CHECK......OK
  Comparing HURPRS.GrbF06 .........OK
 
-  0: The total amount of wall time                        = 275.632454
-  0: The maximum resident set size (KB)                   = 717808
+  0: The total amount of wall time                        = 280.505916
+  0: The maximum resident set size (KB)                   = 710308
 
-Test 101 hafs_regional_atm PASS
+Test 106 hafs_regional_atm PASS
 
 
-baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20220613/INTEL/hafs_regional_atm_thompson_gfdlsf
-working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/FV3_RT/rt_173298/hafs_regional_atm_thompson_gfdlsf
-Checking test 102 hafs_regional_atm_thompson_gfdlsf results ....
+baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20221005/INTEL/hafs_regional_atm_thompson_gfdlsf
+working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/SD_RT/rt_31266/hafs_regional_atm_thompson_gfdlsf
+Checking test 107 hafs_regional_atm_thompson_gfdlsf results ....
  Comparing atmf006.nc .........OK
  Comparing sfcf006.nc .........OK
 
-  0: The total amount of wall time                        = 331.333989
-  0: The maximum resident set size (KB)                   = 1075096
+  0: The total amount of wall time                        = 341.470299
+  0: The maximum resident set size (KB)                   = 1070432
 
-Test 102 hafs_regional_atm_thompson_gfdlsf PASS
+Test 107 hafs_regional_atm_thompson_gfdlsf PASS
 
 
-baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20220613/INTEL/hafs_regional_atm_ocn
-working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/FV3_RT/rt_173298/hafs_regional_atm_ocn
-Checking test 103 hafs_regional_atm_ocn results ....
+baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20221005/INTEL/hafs_regional_atm_ocn
+working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/SD_RT/rt_31266/hafs_regional_atm_ocn
+Checking test 108 hafs_regional_atm_ocn results ....
  Comparing atmf006.nc .........OK
  Comparing sfcf006.nc .........OK
  Comparing archv.2019_241_06.a .........OK
@@ -3078,29 +3158,29 @@ Checking test 103 hafs_regional_atm_ocn results ....
  Comparing ufs.hafs.cpl.hi.2019-08-29-21600.nc .........OK
  Comparing ufs.hafs.cpl.r.2019-08-29-21600.nc .........OK
 
-  0: The total amount of wall time                        = 353.322904
-  0: The maximum resident set size (KB)                   = 759736
+  0: The total amount of wall time                        = 355.456727
+  0: The maximum resident set size (KB)                   = 757796
 
-Test 103 hafs_regional_atm_ocn PASS
+Test 108 hafs_regional_atm_ocn PASS
 
 
-baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20220613/INTEL/hafs_regional_atm_wav
-working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/FV3_RT/rt_173298/hafs_regional_atm_wav
-Checking test 104 hafs_regional_atm_wav results ....
+baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20221005/INTEL/hafs_regional_atm_wav
+working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/SD_RT/rt_31266/hafs_regional_atm_wav
+Checking test 109 hafs_regional_atm_wav results ....
  Comparing atmf006.nc .........OK
  Comparing sfcf006.nc .........OK
  Comparing out_grd.ww3 .........OK
  Comparing out_pnt.ww3 .........OK
 
-  0: The total amount of wall time                        = 847.614225
-  0: The maximum resident set size (KB)                   = 746212
+  0: The total amount of wall time                        = 845.524457
+  0: The maximum resident set size (KB)                   = 745712
 
-Test 104 hafs_regional_atm_wav PASS
+Test 109 hafs_regional_atm_wav PASS
 
 
-baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20220613/INTEL/hafs_regional_atm_ocn_wav
-working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/FV3_RT/rt_173298/hafs_regional_atm_ocn_wav
-Checking test 105 hafs_regional_atm_ocn_wav results ....
+baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20221005/INTEL/hafs_regional_atm_ocn_wav
+working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/SD_RT/rt_31266/hafs_regional_atm_ocn_wav
+Checking test 110 hafs_regional_atm_ocn_wav results ....
  Comparing atmf006.nc .........OK
  Comparing sfcf006.nc .........OK
  Comparing archv.2019_241_06.a .........OK
@@ -3108,29 +3188,29 @@ Checking test 105 hafs_regional_atm_ocn_wav results ....
  Comparing out_grd.ww3 .........OK
  Comparing out_pnt.ww3 .........OK
 
-  0: The total amount of wall time                        = 925.148789
-  0: The maximum resident set size (KB)                   = 770588
+  0: The total amount of wall time                        = 902.611362
+  0: The maximum resident set size (KB)                   = 767348
 
-Test 105 hafs_regional_atm_ocn_wav PASS
+Test 110 hafs_regional_atm_ocn_wav PASS
 
 
-baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20220613/INTEL/hafs_regional_1nest_atm
-working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/FV3_RT/rt_173298/hafs_regional_1nest_atm
-Checking test 106 hafs_regional_1nest_atm results ....
+baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20221005/INTEL/hafs_regional_1nest_atm
+working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/SD_RT/rt_31266/hafs_regional_1nest_atm
+Checking test 111 hafs_regional_1nest_atm results ....
  Comparing atmf006.nc .........OK
  Comparing sfcf006.nc .........OK
  Comparing atm.nest02.f006.nc .........OK
  Comparing sfc.nest02.f006.nc .........OK
 
-  0: The total amount of wall time                        = 445.654964
-  0: The maximum resident set size (KB)                   = 323740
+  0: The total amount of wall time                        = 441.587611
+  0: The maximum resident set size (KB)                   = 322420
 
-Test 106 hafs_regional_1nest_atm PASS
+Test 111 hafs_regional_1nest_atm PASS
 
 
-baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20220613/INTEL/hafs_regional_telescopic_2nests_atm
-working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/FV3_RT/rt_173298/hafs_regional_telescopic_2nests_atm
-Checking test 107 hafs_regional_telescopic_2nests_atm results ....
+baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20221005/INTEL/hafs_regional_telescopic_2nests_atm
+working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/SD_RT/rt_31266/hafs_regional_telescopic_2nests_atm
+Checking test 112 hafs_regional_telescopic_2nests_atm results ....
  Comparing atmf006.nc .........OK
  Comparing sfcf006.nc .........OK
  Comparing atm.nest02.f006.nc .........OK
@@ -3138,29 +3218,29 @@ Checking test 107 hafs_regional_telescopic_2nests_atm results ....
  Comparing atm.nest03.f006.nc .........OK
  Comparing sfc.nest03.f006.nc .........OK
 
-  0: The total amount of wall time                        = 471.754382
-  0: The maximum resident set size (KB)                   = 329500
+  0: The total amount of wall time                        = 466.073164
+  0: The maximum resident set size (KB)                   = 326188
 
-Test 107 hafs_regional_telescopic_2nests_atm PASS
+Test 112 hafs_regional_telescopic_2nests_atm PASS
 
 
-baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20220613/INTEL/hafs_global_1nest_atm
-working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/FV3_RT/rt_173298/hafs_global_1nest_atm
-Checking test 108 hafs_global_1nest_atm results ....
+baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20221005/INTEL/hafs_global_1nest_atm
+working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/SD_RT/rt_31266/hafs_global_1nest_atm
+Checking test 113 hafs_global_1nest_atm results ....
  Comparing atmf006.nc .........OK
  Comparing sfcf006.nc .........OK
  Comparing atm.nest02.f006.nc .........OK
- Comparing sfc.nest02.f006.nc .........OK
+ Comparing sfc.nest02.f006.nc ............ALT CHECK......OK
 
-  0: The total amount of wall time                        = 207.458889
-  0: The maximum resident set size (KB)                   = 209468
+  0: The total amount of wall time                        = 208.420389
+  0: The maximum resident set size (KB)                   = 207920
 
-Test 108 hafs_global_1nest_atm PASS
+Test 113 hafs_global_1nest_atm PASS
 
 
-baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20220613/INTEL/hafs_global_multiple_4nests_atm
-working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/FV3_RT/rt_173298/hafs_global_multiple_4nests_atm
-Checking test 109 hafs_global_multiple_4nests_atm results ....
+baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20221005/INTEL/hafs_global_multiple_4nests_atm
+working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/SD_RT/rt_31266/hafs_global_multiple_4nests_atm
+Checking test 114 hafs_global_multiple_4nests_atm results ....
  Comparing atmf006.nc ............ALT CHECK......OK
  Comparing sfcf006.nc .........OK
  Comparing atm.nest02.f006.nc .........OK
@@ -3170,31 +3250,31 @@ Checking test 109 hafs_global_multiple_4nests_atm results ....
  Comparing sfc.nest04.f006.nc .........OK
  Comparing sfc.nest04.f006.nc .........OK
  Comparing atm.nest05.f006.nc .........OK
- Comparing sfc.nest05.f006.nc .........OK
+ Comparing sfc.nest05.f006.nc ............ALT CHECK......OK
 
-  0: The total amount of wall time                        = 568.753568
-  0: The maximum resident set size (KB)                   = 257988
+  0: The total amount of wall time                        = 565.810012
+  0: The maximum resident set size (KB)                   = 292172
 
-Test 109 hafs_global_multiple_4nests_atm PASS
+Test 114 hafs_global_multiple_4nests_atm PASS
 
 
-baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20220613/INTEL/hafs_regional_specified_moving_1nest_atm
-working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/FV3_RT/rt_173298/hafs_regional_specified_moving_1nest_atm
-Checking test 110 hafs_regional_specified_moving_1nest_atm results ....
+baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20221005/INTEL/hafs_regional_specified_moving_1nest_atm
+working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/SD_RT/rt_31266/hafs_regional_specified_moving_1nest_atm
+Checking test 115 hafs_regional_specified_moving_1nest_atm results ....
  Comparing atmf006.nc .........OK
  Comparing sfcf006.nc .........OK
  Comparing atm.nest02.f006.nc .........OK
  Comparing sfc.nest02.f006.nc ............ALT CHECK......OK
 
-  0: The total amount of wall time                        = 264.967034
-  0: The maximum resident set size (KB)                   = 325720
+  0: The total amount of wall time                        = 266.448674
+  0: The maximum resident set size (KB)                   = 321416
 
-Test 110 hafs_regional_specified_moving_1nest_atm PASS
+Test 115 hafs_regional_specified_moving_1nest_atm PASS
 
 
-baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20220613/INTEL/hafs_regional_storm_following_1nest_atm_ocn
-working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/FV3_RT/rt_173298/hafs_regional_storm_following_1nest_atm_ocn
-Checking test 111 hafs_regional_storm_following_1nest_atm_ocn results ....
+baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20221005/INTEL/hafs_regional_storm_following_1nest_atm_ocn
+working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/SD_RT/rt_31266/hafs_regional_storm_following_1nest_atm_ocn
+Checking test 116 hafs_regional_storm_following_1nest_atm_ocn results ....
  Comparing atmf006.nc .........OK
  Comparing sfcf006.nc .........OK
  Comparing atm.nest02.f006.nc .........OK
@@ -3202,181 +3282,181 @@ Checking test 111 hafs_regional_storm_following_1nest_atm_ocn results ....
  Comparing archv.2020_238_18.a .........OK
  Comparing archs.2020_238_18.a .........OK
 
-  0: The total amount of wall time                        = 264.738476
-  0: The maximum resident set size (KB)                   = 353668
+  0: The total amount of wall time                        = 265.198504
+  0: The maximum resident set size (KB)                   = 351740
 
-Test 111 hafs_regional_storm_following_1nest_atm_ocn PASS
+Test 116 hafs_regional_storm_following_1nest_atm_ocn PASS
 
 
-baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20220613/INTEL/hafs_regional_storm_following_1nest_atm_ocn_wav
-working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/FV3_RT/rt_173298/hafs_regional_storm_following_1nest_atm_ocn_wav
-Checking test 112 hafs_regional_storm_following_1nest_atm_ocn_wav results ....
+baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20221005/INTEL/hafs_regional_storm_following_1nest_atm_ocn_wav
+working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/SD_RT/rt_31266/hafs_regional_storm_following_1nest_atm_ocn_wav
+Checking test 117 hafs_regional_storm_following_1nest_atm_ocn_wav results ....
  Comparing atmf006.nc .........OK
  Comparing sfcf006.nc .........OK
- Comparing atm.nest02.f006.nc .........OK
+ Comparing atm.nest02.f006.nc ............ALT CHECK......OK
  Comparing sfc.nest02.f006.nc ............ALT CHECK......OK
  Comparing archv.2020_238_18.a .........OK
  Comparing archs.2020_238_18.a .........OK
  Comparing out_grd.ww3 .........OK
  Comparing out_pnt.ww3 .........OK
 
-  0: The total amount of wall time                        = 781.344340
-  0: The maximum resident set size (KB)                   = 373328
+  0: The total amount of wall time                        = 775.904566
+  0: The maximum resident set size (KB)                   = 367732
 
-Test 112 hafs_regional_storm_following_1nest_atm_ocn_wav PASS
+Test 117 hafs_regional_storm_following_1nest_atm_ocn_wav PASS
 
 
-baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20220613/INTEL/hafs_global_storm_following_1nest_atm
-working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/FV3_RT/rt_173298/hafs_global_storm_following_1nest_atm
-Checking test 113 hafs_global_storm_following_1nest_atm results ....
+baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20221005/INTEL/hafs_global_storm_following_1nest_atm
+working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/SD_RT/rt_31266/hafs_global_storm_following_1nest_atm
+Checking test 118 hafs_global_storm_following_1nest_atm results ....
  Comparing atmf006.nc .........OK
  Comparing sfcf006.nc .........OK
  Comparing atm.nest02.f006.nc .........OK
  Comparing sfc.nest02.f006.nc .........OK
 
-  0: The total amount of wall time                        = 81.196374
-  0: The maximum resident set size (KB)                   = 225040
+  0: The total amount of wall time                        = 83.534649
+  0: The maximum resident set size (KB)                   = 221640
 
-Test 113 hafs_global_storm_following_1nest_atm PASS
+Test 118 hafs_global_storm_following_1nest_atm PASS
 
 
-baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20220613/INTEL/hafs_regional_docn
-working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/FV3_RT/rt_173298/hafs_regional_docn
-Checking test 114 hafs_regional_docn results ....
+baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20221005/INTEL/hafs_regional_docn
+working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/SD_RT/rt_31266/hafs_regional_docn
+Checking test 119 hafs_regional_docn results ....
  Comparing atmf006.nc .........OK
  Comparing sfcf006.nc .........OK
  Comparing ufs.hafs.cpl.hi.2019-08-29-21600.nc .........OK
  Comparing ufs.hafs.cpl.r.2019-08-29-21600.nc .........OK
  Comparing ufs.hafs.docn.r.2019-08-29-21600.nc .........OK
 
-  0: The total amount of wall time                        = 343.496754
-  0: The maximum resident set size (KB)                   = 778004
+  0: The total amount of wall time                        = 349.812066
+  0: The maximum resident set size (KB)                   = 777064
 
-Test 114 hafs_regional_docn PASS
+Test 119 hafs_regional_docn PASS
 
 
-baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20220613/INTEL/hafs_regional_docn_oisst
-working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/FV3_RT/rt_173298/hafs_regional_docn_oisst
-Checking test 115 hafs_regional_docn_oisst results ....
+baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20221005/INTEL/hafs_regional_docn_oisst
+working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/SD_RT/rt_31266/hafs_regional_docn_oisst
+Checking test 120 hafs_regional_docn_oisst results ....
  Comparing atmf006.nc .........OK
  Comparing sfcf006.nc .........OK
  Comparing ufs.hafs.cpl.hi.2019-08-29-21600.nc .........OK
  Comparing ufs.hafs.cpl.r.2019-08-29-21600.nc .........OK
  Comparing ufs.hafs.docn.r.2019-08-29-21600.nc .........OK
 
-  0: The total amount of wall time                        = 353.843624
-  0: The maximum resident set size (KB)                   = 756940
+  0: The total amount of wall time                        = 349.612699
+  0: The maximum resident set size (KB)                   = 761396
 
-Test 115 hafs_regional_docn_oisst PASS
+Test 120 hafs_regional_docn_oisst PASS
 
 
-baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20220613/INTEL/hafs_regional_datm_cdeps
-working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/FV3_RT/rt_173298/hafs_regional_datm_cdeps
-Checking test 116 hafs_regional_datm_cdeps results ....
+baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20221005/INTEL/hafs_regional_datm_cdeps
+working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/SD_RT/rt_31266/hafs_regional_datm_cdeps
+Checking test 121 hafs_regional_datm_cdeps results ....
  Comparing ufs.hafs.cpl.hi.2019-08-30-00000.nc .........OK
  Comparing ufs.hafs.cpl.r.2019-08-30-00000.nc .........OK
  Comparing ufs.hafs.datm.r.2019-08-30-00000.nc .........OK
 
-  0: The total amount of wall time                        = 940.085829
-  0: The maximum resident set size (KB)                   = 853208
+  0: The total amount of wall time                        = 942.485665
+  0: The maximum resident set size (KB)                   = 854208
 
-Test 116 hafs_regional_datm_cdeps PASS
+Test 121 hafs_regional_datm_cdeps PASS
 
 
-baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20220613/INTEL/datm_cdeps_control_cfsr
-working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/FV3_RT/rt_173298/datm_cdeps_control_cfsr
-Checking test 117 datm_cdeps_control_cfsr results ....
+baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20221005/INTEL/datm_cdeps_control_cfsr
+working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/SD_RT/rt_31266/datm_cdeps_control_cfsr
+Checking test 122 datm_cdeps_control_cfsr results ....
  Comparing RESTART/MOM.res.nc .........OK
  Comparing RESTART/iced.2011-10-02-00000.nc .........OK
  Comparing RESTART/DATM_CFSR.cpl.r.2011-10-02-00000.nc .........OK
 
- 0: The total amount of wall time                        = 139.696877
- 0: The maximum resident set size (KB)                   = 721444
+ 0: The total amount of wall time                        = 140.756528
+ 0: The maximum resident set size (KB)                   = 721076
 
-Test 117 datm_cdeps_control_cfsr PASS
+Test 122 datm_cdeps_control_cfsr PASS
 
 
-baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20220613/INTEL/datm_cdeps_control_cfsr
-working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/FV3_RT/rt_173298/datm_cdeps_restart_cfsr
-Checking test 118 datm_cdeps_restart_cfsr results ....
+baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20221005/INTEL/datm_cdeps_control_cfsr
+working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/SD_RT/rt_31266/datm_cdeps_restart_cfsr
+Checking test 123 datm_cdeps_restart_cfsr results ....
  Comparing RESTART/MOM.res.nc .........OK
  Comparing RESTART/iced.2011-10-02-00000.nc .........OK
  Comparing RESTART/DATM_CFSR.cpl.r.2011-10-02-00000.nc .........OK
 
- 0: The total amount of wall time                        = 80.454861
- 0: The maximum resident set size (KB)                   = 720292
+ 0: The total amount of wall time                        = 80.843905
+ 0: The maximum resident set size (KB)                   = 718832
 
-Test 118 datm_cdeps_restart_cfsr PASS
+Test 123 datm_cdeps_restart_cfsr PASS
 
 
-baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20220613/INTEL/datm_cdeps_control_gefs
-working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/FV3_RT/rt_173298/datm_cdeps_control_gefs
-Checking test 119 datm_cdeps_control_gefs results ....
+baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20221005/INTEL/datm_cdeps_control_gefs
+working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/SD_RT/rt_31266/datm_cdeps_control_gefs
+Checking test 124 datm_cdeps_control_gefs results ....
  Comparing RESTART/MOM.res.nc .........OK
  Comparing RESTART/iced.2011-10-02-00000.nc .........OK
  Comparing RESTART/DATM_GEFS.cpl.r.2011-10-02-00000.nc .........OK
 
- 0: The total amount of wall time                        = 139.949408
- 0: The maximum resident set size (KB)                   = 619856
+ 0: The total amount of wall time                        = 137.636164
+ 0: The maximum resident set size (KB)                   = 619436
 
-Test 119 datm_cdeps_control_gefs PASS
+Test 124 datm_cdeps_control_gefs PASS
 
 
-baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20220613/INTEL/datm_cdeps_iau_gefs
-working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/FV3_RT/rt_173298/datm_cdeps_iau_gefs
-Checking test 120 datm_cdeps_iau_gefs results ....
+baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20221005/INTEL/datm_cdeps_iau_gefs
+working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/SD_RT/rt_31266/datm_cdeps_iau_gefs
+Checking test 125 datm_cdeps_iau_gefs results ....
  Comparing RESTART/MOM.res.nc .........OK
  Comparing RESTART/iced.2011-10-02-00000.nc .........OK
  Comparing RESTART/DATM_GEFS.cpl.r.2011-10-02-00000.nc .........OK
 
- 0: The total amount of wall time                        = 136.761012
- 0: The maximum resident set size (KB)                   = 620072
+ 0: The total amount of wall time                        = 138.385633
+ 0: The maximum resident set size (KB)                   = 619236
 
-Test 120 datm_cdeps_iau_gefs PASS
+Test 125 datm_cdeps_iau_gefs PASS
 
 
-baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20220613/INTEL/datm_cdeps_stochy_gefs
-working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/FV3_RT/rt_173298/datm_cdeps_stochy_gefs
-Checking test 121 datm_cdeps_stochy_gefs results ....
+baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20221005/INTEL/datm_cdeps_stochy_gefs
+working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/SD_RT/rt_31266/datm_cdeps_stochy_gefs
+Checking test 126 datm_cdeps_stochy_gefs results ....
  Comparing RESTART/MOM.res.nc .........OK
  Comparing RESTART/iced.2011-10-02-00000.nc .........OK
  Comparing RESTART/DATM_GEFS.cpl.r.2011-10-02-00000.nc .........OK
 
- 0: The total amount of wall time                        = 138.786408
- 0: The maximum resident set size (KB)                   = 621956
+ 0: The total amount of wall time                        = 136.559660
+ 0: The maximum resident set size (KB)                   = 620280
 
-Test 121 datm_cdeps_stochy_gefs PASS
+Test 126 datm_cdeps_stochy_gefs PASS
 
 
-baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20220613/INTEL/datm_cdeps_bulk_cfsr
-working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/FV3_RT/rt_173298/datm_cdeps_bulk_cfsr
-Checking test 122 datm_cdeps_bulk_cfsr results ....
+baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20221005/INTEL/datm_cdeps_bulk_cfsr
+working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/SD_RT/rt_31266/datm_cdeps_bulk_cfsr
+Checking test 127 datm_cdeps_bulk_cfsr results ....
  Comparing RESTART/MOM.res.nc .........OK
  Comparing RESTART/iced.2011-10-02-00000.nc .........OK
  Comparing RESTART/DATM_CFSR.cpl.r.2011-10-02-00000.nc .........OK
 
- 0: The total amount of wall time                        = 140.843575
- 0: The maximum resident set size (KB)                   = 721444
+ 0: The total amount of wall time                        = 142.232861
+ 0: The maximum resident set size (KB)                   = 718880
 
-Test 122 datm_cdeps_bulk_cfsr PASS
+Test 127 datm_cdeps_bulk_cfsr PASS
 
 
-baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20220613/INTEL/datm_cdeps_bulk_gefs
-working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/FV3_RT/rt_173298/datm_cdeps_bulk_gefs
-Checking test 123 datm_cdeps_bulk_gefs results ....
+baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20221005/INTEL/datm_cdeps_bulk_gefs
+working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/SD_RT/rt_31266/datm_cdeps_bulk_gefs
+Checking test 128 datm_cdeps_bulk_gefs results ....
  Comparing RESTART/MOM.res.nc .........OK
  Comparing RESTART/iced.2011-10-02-00000.nc .........OK
  Comparing RESTART/DATM_GEFS.cpl.r.2011-10-02-00000.nc .........OK
 
- 0: The total amount of wall time                        = 135.360226
- 0: The maximum resident set size (KB)                   = 619116
+ 0: The total amount of wall time                        = 139.791382
+ 0: The maximum resident set size (KB)                   = 622060
 
-Test 123 datm_cdeps_bulk_gefs PASS
+Test 128 datm_cdeps_bulk_gefs PASS
 
 
-baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20220613/INTEL/datm_cdeps_mx025_cfsr
-working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/FV3_RT/rt_173298/datm_cdeps_mx025_cfsr
-Checking test 124 datm_cdeps_mx025_cfsr results ....
+baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20221005/INTEL/datm_cdeps_mx025_cfsr
+working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/SD_RT/rt_31266/datm_cdeps_mx025_cfsr
+Checking test 129 datm_cdeps_mx025_cfsr results ....
  Comparing RESTART/MOM.res.nc .........OK
  Comparing RESTART/MOM.res_1.nc .........OK
  Comparing RESTART/MOM.res_2.nc .........OK
@@ -3384,15 +3464,15 @@ Checking test 124 datm_cdeps_mx025_cfsr results ....
  Comparing RESTART/iced.2011-10-01-43200.nc .........OK
  Comparing RESTART/DATM_CFSR.cpl.r.2011-10-01-43200.nc .........OK
 
-  0: The total amount of wall time                        = 304.236890
-  0: The maximum resident set size (KB)                   = 566404
+  0: The total amount of wall time                        = 303.452172
+  0: The maximum resident set size (KB)                   = 566120
 
-Test 124 datm_cdeps_mx025_cfsr PASS
+Test 129 datm_cdeps_mx025_cfsr PASS
 
 
-baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20220613/INTEL/datm_cdeps_mx025_gefs
-working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/FV3_RT/rt_173298/datm_cdeps_mx025_gefs
-Checking test 125 datm_cdeps_mx025_gefs results ....
+baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20221005/INTEL/datm_cdeps_mx025_gefs
+working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/SD_RT/rt_31266/datm_cdeps_mx025_gefs
+Checking test 130 datm_cdeps_mx025_gefs results ....
  Comparing RESTART/MOM.res.nc .........OK
  Comparing RESTART/MOM.res_1.nc .........OK
  Comparing RESTART/MOM.res_2.nc .........OK
@@ -3400,65 +3480,65 @@ Checking test 125 datm_cdeps_mx025_gefs results ....
  Comparing RESTART/iced.2011-10-01-43200.nc .........OK
  Comparing RESTART/DATM_GEFS.cpl.r.2011-10-01-43200.nc .........OK
 
-  0: The total amount of wall time                        = 301.108358
-  0: The maximum resident set size (KB)                   = 532192
+  0: The total amount of wall time                        = 301.559825
+  0: The maximum resident set size (KB)                   = 532380
 
-Test 125 datm_cdeps_mx025_gefs PASS
+Test 130 datm_cdeps_mx025_gefs PASS
 
 
-baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20220613/INTEL/datm_cdeps_control_cfsr
-working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/FV3_RT/rt_173298/datm_cdeps_multiple_files_cfsr
-Checking test 126 datm_cdeps_multiple_files_cfsr results ....
+baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20221005/INTEL/datm_cdeps_control_cfsr
+working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/SD_RT/rt_31266/datm_cdeps_multiple_files_cfsr
+Checking test 131 datm_cdeps_multiple_files_cfsr results ....
  Comparing RESTART/DATM_CFSR.cpl.r.2011-10-02-00000.nc .........OK
 
- 0: The total amount of wall time                        = 141.281245
- 0: The maximum resident set size (KB)                   = 719052
+ 0: The total amount of wall time                        = 141.251375
+ 0: The maximum resident set size (KB)                   = 719032
 
-Test 126 datm_cdeps_multiple_files_cfsr PASS
+Test 131 datm_cdeps_multiple_files_cfsr PASS
 
 
-baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20220613/INTEL/datm_cdeps_3072x1536_cfsr
-working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/FV3_RT/rt_173298/datm_cdeps_3072x1536_cfsr
-Checking test 127 datm_cdeps_3072x1536_cfsr results ....
+baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20221005/INTEL/datm_cdeps_3072x1536_cfsr
+working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/SD_RT/rt_31266/datm_cdeps_3072x1536_cfsr
+Checking test 132 datm_cdeps_3072x1536_cfsr results ....
  Comparing RESTART/MOM.res.nc .........OK
  Comparing RESTART/iced.2011-10-02-00000.nc .........OK
  Comparing RESTART/DATM_CFSR3072x1536.cpl.r.2011-10-02-00000.nc .........OK
 
- 0: The total amount of wall time                        = 194.847542
- 0: The maximum resident set size (KB)                   = 1832320
+ 0: The total amount of wall time                        = 191.887181
+ 0: The maximum resident set size (KB)                   = 1893652
 
-Test 127 datm_cdeps_3072x1536_cfsr PASS
+Test 132 datm_cdeps_3072x1536_cfsr PASS
 
 
-baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20220613/INTEL/datm_cdeps_gfs
-working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/FV3_RT/rt_173298/datm_cdeps_gfs
-Checking test 128 datm_cdeps_gfs results ....
+baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20221005/INTEL/datm_cdeps_gfs
+working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/SD_RT/rt_31266/datm_cdeps_gfs
+Checking test 133 datm_cdeps_gfs results ....
  Comparing RESTART/MOM.res.nc .........OK
  Comparing RESTART/iced.2021-03-23-21600.nc .........OK
  Comparing RESTART/DATM_GFS.cpl.r.2021-03-23-21600.nc .........OK
 
- 0: The total amount of wall time                        = 196.191175
- 0: The maximum resident set size (KB)                   = 1893300
+ 0: The total amount of wall time                        = 192.217674
+ 0: The maximum resident set size (KB)                   = 1895716
 
-Test 128 datm_cdeps_gfs PASS
+Test 133 datm_cdeps_gfs PASS
 
 
-baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20220613/INTEL/datm_cdeps_debug_cfsr
-working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/FV3_RT/rt_173298/datm_cdeps_debug_cfsr
-Checking test 129 datm_cdeps_debug_cfsr results ....
+baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20221005/INTEL/datm_cdeps_debug_cfsr
+working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/SD_RT/rt_31266/datm_cdeps_debug_cfsr
+Checking test 134 datm_cdeps_debug_cfsr results ....
  Comparing RESTART/MOM.res.nc .........OK
  Comparing RESTART/iced.2011-10-01-21600.nc .........OK
  Comparing RESTART/DATM_CFSR.cpl.r.2011-10-01-21600.nc .........OK
 
- 0: The total amount of wall time                        = 430.741276
- 0: The maximum resident set size (KB)                   = 728312
+ 0: The total amount of wall time                        = 430.963581
+ 0: The maximum resident set size (KB)                   = 726348
 
-Test 129 datm_cdeps_debug_cfsr PASS
+Test 134 datm_cdeps_debug_cfsr PASS
 
 
-baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20220613/INTEL/control_atmwav
-working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/FV3_RT/rt_173298/control_atmwav
-Checking test 130 control_atmwav results ....
+baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20221005/INTEL/control_atmwav
+working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/SD_RT/rt_31266/control_atmwav
+Checking test 135 control_atmwav results ....
  Comparing sfcf000.nc .........OK
  Comparing sfcf012.nc .........OK
  Comparing atmf000.nc .........OK
@@ -3501,15 +3581,15 @@ Checking test 130 control_atmwav results ....
  Comparing RESTART/sfc_data.tile6.nc .........OK
  Comparing 20210322.180000.restart.glo_1deg .........OK
 
-  0: The total amount of wall time                        = 81.305408
-  0: The maximum resident set size (KB)                   = 494276
+  0: The total amount of wall time                        = 81.113350
+  0: The maximum resident set size (KB)                   = 490648
 
-Test 130 control_atmwav PASS
+Test 135 control_atmwav PASS
 
 
-baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20220613/INTEL/control_c384gdas_wav
-working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/FV3_RT/rt_173298/control_c384gdas_wav
-Checking test 131 control_c384gdas_wav results ....
+baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20221005/INTEL/control_c384gdas_wav
+working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/SD_RT/rt_31266/control_c384gdas_wav
+Checking test 136 control_c384gdas_wav results ....
  Comparing sfcf000.nc .........OK
  Comparing sfcf003.nc .........OK
  Comparing atmf000.nc .........OK
@@ -3554,15 +3634,15 @@ Checking test 131 control_c384gdas_wav results ....
  Comparing 20210322.030000.restart.gnh_10m .........OK
  Comparing 20210322.030000.restart.gsh_15m .........OK
 
-  0: The total amount of wall time                        = 710.716744
-  0: The maximum resident set size (KB)                   = 1053920
+  0: The total amount of wall time                        = 702.155585
+  0: The maximum resident set size (KB)                   = 1056052
 
-Test 131 control_c384gdas_wav PASS
+Test 136 control_c384gdas_wav PASS
 
 
-baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20220613/INTEL/control_atm_aerosols
-working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/FV3_RT/rt_173298/control_atm_aerosols
-Checking test 132 control_atm_aerosols results ....
+baseline dir = /scratch2/BMC/wrfruc/RT/NEMSfv3gfs/RRFS_dev-20221005/INTEL/control_atm_aerosols
+working dir  = /scratch1/NCEPDEV/stmp2/Samuel.Trahan/SD_RT/rt_31266/control_atm_aerosols
+Checking test 137 control_atm_aerosols results ....
  Comparing sfcf000.nc .........OK
  Comparing sfcf024.nc .........OK
  Comparing atmf000.nc .........OK
@@ -3608,12 +3688,12 @@ Checking test 132 control_atm_aerosols results ....
  Comparing RESTART/sfc_data.tile5.nc .........OK
  Comparing RESTART/sfc_data.tile6.nc .........OK
 
-  0: The total amount of wall time                        = 285.119451
-  0: The maximum resident set size (KB)                   = 912004
+  0: The total amount of wall time                        = 287.156136
+  0: The maximum resident set size (KB)                   = 914120
 
-Test 132 control_atm_aerosols PASS
+Test 137 control_atm_aerosols PASS
 
 
 REGRESSION TEST WAS SUCCESSFUL
-Wed Jun 22 11:51:49 UTC 2022
-Elapsed time: 13h:20m:52s. Have a nice day!
+Wed Oct  5 22:47:25 UTC 2022
+Elapsed time: 01h:04m:15s. Have a nice day!
