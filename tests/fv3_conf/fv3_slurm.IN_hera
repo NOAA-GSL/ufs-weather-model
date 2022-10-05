@@ -33,6 +33,8 @@ export PSM_SHAREDCONTEXTS=1
 # Avoid job errors because of filesystem synchronization delays
 sync && sleep 1
 
+export LD_PRELOAD=/home/Samuel.Trahan/src/mpitest/crash_mpi_abort.so${LD_PRELOAD:+:$LD_PRELOAD}
+
 srun --label -n @[TASKS] ./fv3.exe
 
 echo "Model ended:    " `date`
