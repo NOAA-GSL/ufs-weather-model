@@ -415,7 +415,7 @@ if [[ $MACHINE_ID = hera.* ]] || [[ $MACHINE_ID = orion.* ]] || [[ $MACHINE_ID =
 fi
 
 # Overwrite default RUNDIR_ROOT if environment variable RUNDIR_ROOT is set
-RUNDIR_ROOT=${RUNDIR_ROOT:-${PTMP}/${USER}/SD_RT}/rt_$$
+RUNDIR_ROOT=${RUNDIR_ROOT:-${PTMP}/${USER}/FV3_RT}/rt_$$
 mkdir -p ${RUNDIR_ROOT}
 
 CREATE_BASELINE=false
