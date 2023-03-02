@@ -1,14 +1,14 @@
 [submodule "FV3"]
   path = FV3
   url = https://github.com/NOAA-GSL/fv3atm
-  branch = RRFS_dev
+  branch = rrfs_dev_merge
 [submodule "WW3"]
   path = WW3
   url = https://github.com/NOAA-EMC/WW3
   branch = dev/ufs-weather-model
 [submodule "stochastic_physics"]
   path = stochastic_physics
-  url = https://github.com/noaa-psd/stochastic_physics
+  url = https://github.com/NOAA-PSL/stochastic_physics
   branch = master
 [submodule "CMakeModules"]
   path = CMakeModules
@@ -41,4 +41,8 @@
 [submodule "AQM"]
   path = AQM
   url = https://github.com/NOAA-EMC/AQM
+  branch = develop
+[submodule "NOAHMP"]
+  path = NOAHMP-interface/noahmp
+  url = https://github.com/NOAA-EMC/noahmp
   branch = develop

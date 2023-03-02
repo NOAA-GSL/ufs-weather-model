@@ -107,7 +107,6 @@ deflate_level=1
 /
 
 &gfs_physics_nml
-  diag_flux = @[DIAG_FLUX]
   sfclay_compute_flux = @[SFCLAY_COMPUTE_FLUX]
   fhzero       = @[FHZERO]
   h2o_phys     = .true.
@@ -176,7 +175,7 @@ deflate_level=1
   iopt_crs     = 2
   iopt_btr     = 1
   iopt_run     = 1
-  iopt_sfc     = 3
+  iopt_sfc     = 4
   iopt_frz     = 1
   iopt_inf     = 1
   iopt_rad     = 3
@@ -198,7 +197,6 @@ deflate_level=1
   cplwav       = @[CPLWAV]
   cplwav2atm   = @[CPLWAV2ATM]
   effr_in      = .true.
-  ldiag_ugwp           = .false.
   do_ugwp              = @[DO_UGWP]
   do_tofd              = @[DO_TOFD]
   gwd_opt              = @[GWD_OPT]

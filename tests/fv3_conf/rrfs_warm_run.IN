@@ -5,12 +5,12 @@ OPNREQ_TEST=${OPNREQ_TEST:-false}
 SUFFIX=${RT_SUFFIX}
 
 if [[ "${RRFS_RESTART:-NO}" == YES ]] ; then
-    cp -r ../${DEP_RUN}${SUFFIX}/RESTART/${RESTART_FILE_PREFIX}.* ./INPUT
-    rm -f INPUT/fv_core.res.*
-    rm -f INPUT/fv_srf_wnd.res.*
-    rm -f INPUT/fv_tracer.res.*
-    rm -f INPUT/phy_data.*
-    rm -f INPUT/sfc_data.*
+    # cp -r ../${DEP_RUN}${SUFFIX}/RESTART/${RESTART_FILE_PREFIX}.* ./INPUT
+    # rm -f INPUT/fv_core.res.*
+    # rm -f INPUT/fv_srf_wnd.res.*
+    # rm -f INPUT/fv_tracer.res.*
+    # rm -f INPUT/phy_data.*
+    # rm -f INPUT/sfc_data.*
     cp @[INPUTDATA_ROOT]/FV3_input_data_conus13km/INPUT/grid_spec.nc INPUT/.
     cp @[INPUTDATA_ROOT]/FV3_input_data_conus13km/INPUT/*_grid.tile*.nc INPUT/.
     cp @[INPUTDATA_ROOT]/FV3_input_data_conus13km/INPUT/oro_data*.nc INPUT/.

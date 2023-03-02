@@ -205,7 +205,7 @@
        cnvcld         = .true.
        imfshalcnv     = 2
        imfdeepcnv     = 2
-       cdmbgwd        = 0.88,0.04
+       cdmbgwd        = 1.0,1.0,1.0,1.0
        sfc_z0_type    = 6
        prslrd0        = 0.
        ivegsrc        = 1
@@ -249,6 +249,15 @@
        do_skeb        = .false.
        lndp_type      = 0
        n_var_lndp     = 0
+       gwd_opt        = 2
+       do_ugwp_v0     = .false.
+       do_ugwp_v1     = .false.
+       do_ugwp_v1_w_gsldrag = .false.
+       do_ugwp_v1_orog_only = .false.
+       do_gsl_drag_ls_bl    = .true.
+       do_gsl_drag_ss       = .true.
+       do_gsl_drag_tofd     = .true.
+       do_ugwp_v0_orog_only = .false.
 /
 
  &gfdl_cloud_microphysics_nml
@@ -313,7 +322,7 @@
        !FNZORC   = "global_zorclim.1x1.grb",
        FNALBC   = "global_snowfree_albedo.bosu.t1534.3072.1536.rg.grb",
        FNALBC2  = "global_albedo4.1x1.grb",
-       FNAISC   = "CFSR.SEAICE.1982.2012.monthly.clim.grb",
+       FNAISC   = "IMS-NIC.blended.ice.monthly.clim.grb",
        FNTG3C   = "global_tg3clim.2.6x1.5.grb",
        FNVEGC   = "global_vegfrac.0.144.decpercent.grb",
        FNVETC   = "global_vegtype.igbp.t1534.3072.1536.rg.grb",

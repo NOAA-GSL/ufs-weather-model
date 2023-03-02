@@ -31,7 +31,7 @@ export FV3_RUN=control_run.IN
 export CCPP_SUITE=FV3_HRRR
 export INPUT_NML=rap.nml.IN
 export FIELD_TABLE=field_table_thompson_aero_tke
-export NEW_DIAGTABLE=diag_table_rap
+export DIAG_TABLE=diag_table_rap
 
 export SFCLAY_COMPUTE_FLUX=.true.
 
@@ -50,6 +50,7 @@ export DO_DEEP=.false.
 export SHAL_CNV=.false.
 export IMFSHALCNV=-1
 export IMFDEEPCNV=-1
+export LHEATSTRG=.false.
 export LSM=3
 export LSOIL_LSM=9
 export KICE=9
@@ -63,5 +64,3 @@ export DO_GSL_DRAG_TOFD=.true.
 export DO_UGWP_V1=.false.
 export DO_UGWP_V1_OROG_ONLY=.false.
 
-
-export DIAG_FLUX=.true.

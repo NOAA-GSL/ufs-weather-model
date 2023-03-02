@@ -29,6 +29,7 @@ usage() {
 [[ $# -eq 0 ]] && usage
 
 rt_single() {
+  rm -f $RT_SINGLE_CONF
   local compile_line=''
   local run_line=''
   while read -r line || [ "$line" ]; do
@@ -50,20 +51,20 @@ rt_single() {
     if [[ $line =~ RUN ]]; then
       tmp_test=$(echo $line | cut -d'|' -f2 | sed -e 's/^ *//' -e 's/ *$//')
       if [[ $SINGLE_NAME == $tmp_test && $compile_line != '' ]]; then
-        echo $compile_line >$TESTS_FILE
+        echo $compile_line > $RT_SINGLE_CONF
         dep_test=$(echo $line | grep -w $tmp_test | cut -d'|' -f5 | sed -e 's/^ *//' -e 's/ *$//')
         if [[ $dep_test != '' ]]; then
           dep_line=$(cat rt.conf | grep -w "$dep_test" | grep -v "$tmp_test")
           dep_line="${dep_line#"${dep_line%%[![:space:]]*}"}"
-          echo $dep_line >>$TESTS_FILE
+          echo $dep_line >> $RT_SINGLE_CONF
         fi
-        echo $line >>$TESTS_FILE
+        echo $line >> $RT_SINGLE_CONF
         break
       fi
     fi
-  done <'rt.conf'
+  done < $TESTS_FILE
 
-  if [[ ! -f $TESTS_FILE ]]; then
+  if [[ ! -f $RT_SINGLE_CONF ]]; then
     echo "$SINGLE_NAME does not exist or cannot be run on $MACHINE_ID"
     exit 1
   fi
@@ -119,6 +120,8 @@ else
   exit 1
 fi
 
+readonly RT_SINGLE_CONF='rt_single.conf'
+
 # Default compiler "intel"
 export RT_COMPILER=${RT_COMPILER:-intel}
 
@@ -127,68 +130,8 @@ source rt_utils.sh
 
 source module-setup.sh
 
-if [[ $MACHINE_ID = wcoss_cray ]]; then
 
-  module load xt-lsfhpc
-
-  module use /usrx/local/emc_rocoto/modulefiles
-  module load rocoto/1.3.0rc2
-  ROCOTORUN=$(which rocotorun)
-  ROCOTOSTAT=$(which rocotostat)
-  ROCOTOCOMPLETE=$(which rocotocomplete)
-  ROCOTO_SCHEDULER=lsfcray
-
-  module use /gpfs/hps/nco/ops/nwtest/modulefiles
-  module load ecflow/intel/4.17.0.1
-  ECFLOW_START=${ECF_ROOT}/bin/ecflow_start.sh
-  ECF_PORT=$(grep $USER /usrx/local/sys/ecflow/assigned_ports.txt | awk '{print $2}')
-  module load python/3.6.3
-
-  DISKNM=/gpfs/hps3/emc/nems/noscrub/emc.nemspara/RT
-  QUEUE=debug
-  COMPILE_QUEUE=dev
-  PARTITION=
-  ACCNR="${ACCNR:-GFS-DEV}"
-  if [[ -d /gpfs/hps3/ptmp ]] ; then
-      STMP=/gpfs/hps3/stmp
-      PTMP=/gpfs/hps3/stmp
-  else
-      STMP=/gpfs/hps3/stmp
-      PTMP=/gpfs/hps3/ptmp
-  fi
-  SCHEDULER=lsf
-  cp fv3_conf/fv3_bsub.IN_wcoss_cray fv3_conf/fv3_bsub.IN
-  cp fv3_conf/compile_bsub.IN_wcoss_cray fv3_conf/compile_bsub.IN
-
-elif [[ $MACHINE_ID = wcoss_dell_p3 ]]; then
-
-  module load lsf/10.1
-  module load python/3.6.3
-
-  module use /usrx/local/dev/emc_rocoto/modulefiles
-  module load ruby/2.5.1 rocoto/1.3.0rc2
-  ROCOTORUN=$(which rocotorun)
-  ROCOTOSTAT=$(which rocotostat)
-  ROCOTOCOMPLETE=$(which rocotocomplete)
-  ROCOTO_SCHEDULER=lsf
-
-  module load ips/18.0.1.163
-  module load ecflow/4.17.0
-  ECFLOW_START=${ECF_ROOT}/bin/ecflow_start.sh
-  ECF_PORT=$(grep $USER /usrx/local/sys/ecflow/assigned_ports.txt | awk '{print $2}')
-
-  DISKNM=/gpfs/dell2/emc/modeling/noscrub/emc.nemspara/RT
-  QUEUE=debug
-  COMPILE_QUEUE=dev_transfer
-  PARTITION=
-  ACCNR="${ACCNR:-GFS-DEV}"
-  STMP=/gpfs/dell2/stmp
-  PTMP=/gpfs/dell2/ptmp
-  SCHEDULER=lsf
-  cp fv3_conf/fv3_bsub.IN_wcoss_dell_p3 fv3_conf/fv3_bsub.IN
-  cp fv3_conf/compile_bsub.IN_wcoss_dell_p3 fv3_conf/compile_bsub.IN
-
-elif [[ $MACHINE_ID = wcoss2 ]]; then
+if [[ $MACHINE_ID = wcoss2.* ]]; then
 
   #module use /usrx/local/dev/emc_rocoto/modulefiles
   #module load ruby/2.5.1 rocoto/1.3.0rc2
@@ -197,7 +140,7 @@ elif [[ $MACHINE_ID = wcoss2 ]]; then
   #ROCOTOCOMPLETE=$(which rocotocomplete)
   #ROCOTO_SCHEDULER=lsf
 
-  module load ecflow/5.6.0.6
+  module load ecflow/5.6.0.13
   module load gcc/10.3.0 python/3.8.6
   ECFLOW_START=${ECF_ROOT}/scripts/server_check.sh
   export ECF_OUTPUTDIR=${PATHRT}/ecf_outputdir
@@ -207,13 +150,36 @@ elif [[ $MACHINE_ID = wcoss2 ]]; then
   mkdir -p ${ECF_COMDIR}
   export colonifnco=":output"  # hack
 
-  DISKNM=/lfs/h1/emc/eib/noscrub/Dusan.Jovic
+  DISKNM=/lfs/h2/emc/nems/noscrub/emc.nems/RT
   QUEUE=dev
   COMPILE_QUEUE=dev
   PARTITION=
   ACCNR="${ACCNR:-GFS-DEV}"
-  STMP=/lfs/h1/emc/ptmp
-  PTMP=/lfs/h1/emc/ptmp
+  STMP=/lfs/h2/emc/ptmp
+  PTMP=/lfs/h2/emc/ptmp
+  SCHEDULER=pbs
+  cp fv3_conf/fv3_qsub.IN_wcoss2 fv3_conf/fv3_qsub.IN
+  cp fv3_conf/compile_qsub.IN_wcoss2 fv3_conf/compile_qsub.IN
+
+elif [[ $MACHINE_ID = acorn.* ]]; then
+
+  module load ecflow/5.6.0.13
+  module load gcc/10.3.0 python/3.8.6
+  ECFLOW_START=${ECF_ROOT}/scripts/server_check.sh
+  export ECF_OUTPUTDIR=${PATHRT}/ecf_outputdir
+  export ECF_COMDIR=${PATHRT}/ecf_comdir
+  rm -rf ${ECF_OUTPUTDIR} ${ECF_COMDIR}
+  mkdir -p ${ECF_OUTPUTDIR}
+  mkdir -p ${ECF_COMDIR}
+  export colonifnco=":output"  # hack
+
+  DISKNM=/lfs/h1/emc/nems/noscrub/emc.nems/RT
+  QUEUE=dev
+  COMPILE_QUEUE=dev
+  PARTITION=
+  ACCNR="${ACCNR:-GFS-DEV}"
+  STMP=/lfs/h2/emc/ptmp
+  PTMP=/lfs/h2/emc/ptmp
   SCHEDULER=pbs
   cp fv3_conf/fv3_qsub.IN_wcoss2 fv3_conf/fv3_qsub.IN
   cp fv3_conf/compile_qsub.IN_wcoss2 fv3_conf/compile_qsub.IN
@@ -336,8 +302,8 @@ elif [[ $MACHINE_ID = s4.* ]]; then
 
   ACCNR="${ACCNR:-star}"
   PARTITION=s4
-  dprefix=/data/users/dhuber/save
-  DISKNM=$dprefix/nems/emc.nemspara/RT
+  dprefix=/data/prod
+  DISKNM=$dprefix/emc.nemspara/RT
   STMP=/scratch/short/users
   PTMP=/scratch/users
 
@@ -408,11 +374,7 @@ echo "Machine: " $MACHINE_ID "    Account: " $ACCNR
 
 mkdir -p ${STMP}/${USER}
 
-# Different own baseline directories for different compilers on Theia/Cheyenne
-NEW_BASELINE=${STMP}/${USER}/FV3_RT/REGRESSION_TEST
-if [[ $MACHINE_ID = hera.* ]] || [[ $MACHINE_ID = orion.* ]] || [[ $MACHINE_ID = cheyenne.* ]] || [[ $MACHINE_ID = gaea.* ]] || [[ $MACHINE_ID = jet.* ]] || [[ $MACHINE_ID = s4.* ]] ; then
-    NEW_BASELINE=${NEW_BASELINE}_${RT_COMPILER^^}
-fi
+NEW_BASELINE=${STMP}/${USER}/FV3_RT/REGRESSION_TEST_${RT_COMPILER^^}
 
 # Overwrite default RUNDIR_ROOT if environment variable RUNDIR_ROOT is set
 RUNDIR_ROOT=${RUNDIR_ROOT:-${PTMP}/${USER}/FV3_RT}/rt_$$
@@ -443,8 +405,13 @@ while getopts ":cl:mn:dwkreh" opt; do
       ;;
     n)
       SINGLE_NAME=$OPTARG
-      TESTS_FILE='rt.conf.single'
-      rm -f $TESTS_FILE
+      ;;
+    d)
+      export delete_rundir=true
+      awk -F "|" '{print $5}' rt.conf | grep "\S" > keep_tests.tmp
+      ;;
+    w)
+      export skip_check_results=true
       ;;
     d)
       export delete_rundir=true
@@ -480,6 +447,7 @@ done
 
 if [[ $SINGLE_NAME != '' ]]; then
   rt_single
+  TESTS_FILE=$RT_SINGLE_CONF
 fi
 
 if [[ $TESTS_FILE =~ '35d' ]] || [[ $TESTS_FILE =~ 'weekly' ]]; then
@@ -487,14 +455,11 @@ if [[ $TESTS_FILE =~ '35d' ]] || [[ $TESTS_FILE =~ 'weekly' ]]; then
 fi
 
 BL_DATE=20221013
-if [[ $MACHINE_ID = hera.* ]] || [[ $MACHINE_ID = orion.* ]] || [[ $MACHINE_ID = cheyenne.* ]] || [[ $MACHINE_ID = gaea.* ]] || [[ $MACHINE_ID = jet.* ]] || [[ $MACHINE_ID = s4.* ]]; then
-  RTPWD=${RTPWD:-$DISKNM/NEMSfv3gfs/RRFS_dev-${BL_DATE}/${RT_COMPILER^^}}
-else
-  RTPWD=${RTPWD:-$DISKNM/NEMSfv3gfs/RRFS_dev-${BL_DATE}}
-fi
 
-INPUTDATA_ROOT=${INPUTDATA_ROOT:-$DISKNM/NEMSfv3gfs/input-data-RRFS_dev-20221004}
-INPUTDATA_ROOT_WW3=${INPUTDATA_ROOT}/WW3_input_data_20211113
+RTPWD=${RTPWD:-$DISKNM/NEMSfv3gfs/develop-${BL_DATE}/${RT_COMPILER^^}}
+
+INPUTDATA_ROOT=${INPUTDATA_ROOT:-$DISKNM/NEMSfv3gfs/input-data-20221101}
+INPUTDATA_ROOT_WW3=${INPUTDATA_ROOT}/WW3_input_data_20220624
 INPUTDATA_ROOT_BMIC=${INPUTDATA_ROOT_BMIC:-$DISKNM/NEMSfv3gfs/BM_IC-20220207}
 
 shift $((OPTIND-1))
@@ -537,19 +502,7 @@ if [[ $ROCOTO == true ]]; then
 
   rm -f $ROCOTO_XML $ROCOTO_DB $ROCOTO_STATE *_lock.db
 
-  if [[ $MACHINE_ID = wcoss ]]; then
-    QUEUE=dev
-    COMPILE_QUEUE=dev
-    ROCOTO_SCHEDULER=lsf
-  elif [[ $MACHINE_ID = wcoss_cray ]]; then
-    QUEUE=dev
-    COMPILE_QUEUE=dev
-    ROCOTO_SCHEDULER=lsfcray
-  elif [[ $MACHINE_ID = wcoss_dell_p3 ]]; then
-    QUEUE=dev
-    COMPILE_QUEUE=dev_transfer
-    ROCOTO_SCHEDULER=lsf
-  elif [[ $MACHINE_ID = wcoss2 ]]; then
+  if [[ $MACHINE_ID = wcoss2.* || $MACHINE_ID = acorn.* ]]; then
     QUEUE=dev
     COMPILE_QUEUE=dev
     ROCOTO_SCHEDULER=pbs
@@ -635,13 +588,7 @@ suite ${ECFLOW_SUITE}
     limit max_jobs ${MAX_JOBS}
 EOF
 
-  if [[ $MACHINE_ID = wcoss ]]; then
-    QUEUE=dev
-  elif [[ $MACHINE_ID = wcoss_cray ]]; then
-    QUEUE=dev
-  elif [[ $MACHINE_ID = wcoss_dell_p3 ]]; then
-    QUEUE=dev
-  elif [[ $MACHINE_ID = wcoss2 ]]; then
+  if [[ $MACHINE_ID = wcoss2.* || $MACHINE_ID = acorn.* ]]; then
     QUEUE=dev
   elif [[ $MACHINE_ID = hera.* ]]; then
     QUEUE=batch
@@ -779,6 +726,8 @@ EOF
     (
       source ${PATHRT}/tests/$TEST_NAME
 
+      compute_petbounds_and_tasks
+
       TPN=$(( TPN / THRD ))
       NODES=$(( TASKS / TPN ))
       if (( NODES * TPN < TASKS )); then
@@ -884,7 +833,7 @@ else
   [[ ${KEEP_RUNDIR} == false ]] && rm -rf ${RUNDIR_ROOT}
   [[ ${ROCOTO} == true ]] && rm -f ${ROCOTO_XML} ${ROCOTO_DB} ${ROCOTO_STATE} *_lock.db
   [[ ${TEST_35D} == true ]] && rm -f tests/cpld_bmark*_20*
-  [[ ${SINGLE_NAME} != '' ]] && rm -f rt.conf.single
+  [[ ${SINGLE_NAME} != '' ]] && rm -f $RT_SINGLE_CONF
 fi
 
 date >> ${REGRESSIONTEST_LOG}
