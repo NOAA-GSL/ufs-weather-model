@@ -28,6 +28,11 @@ usage() {
 
 [[ $# -eq 0 ]] && usage
 
+# option to set local values with a config file
+if [ -d "$config_path" ]; then
+    source $config_path/local_vars.sh
+fi
+
 rt_single() {
   rm -f $RT_SINGLE_CONF
   local compile_line=''
@@ -220,12 +225,12 @@ elif [[ $MACHINE_ID = hera.* ]]; then
   QUEUE=batch
   COMPILE_QUEUE=batch
 
-  #ACCNR="${ACCNR:-fv3-cpu}
+  ACCNR="${ACCNR:-fv3-cpu}"
   PARTITION=
-  dprefix=/scratch1/NCEPDEV
-  DISKNM=$dprefix/nems/emc.nemspara/RT
-  STMP=$dprefix/stmp4
-  PTMP=$dprefix/stmp2
+  dprefix="${dprefix:-/scratch1/NCEPDEV}"
+  DISKNM="${DISKNM:-$dprefix/nems/emc.nemspara/RT}"
+  STMP=${STMP:-$dprefix/stmp4}
+  PTMP=${PTMP:-dprefix/stmp2}
 
   SCHEDULER=slurm
   cp fv3_conf/fv3_slurm.IN_hera fv3_conf/fv3_slurm.IN
@@ -273,7 +278,7 @@ elif [[ $MACHINE_ID = jet.* ]]; then
   COMPILE_QUEUE=batch
   ACCNR="${ACCNR:-h-nems}"
   PARTITION=xjet
-  DISKNM=/mnt/lfs4/HFIP/hfv3gfs/role.epic/RT
+  DISKNM=${DISKNM:-/mnt/lfs4/HFIP/hfv3gfs/role.epic/RT}
   dprefix=${dprefix:-/lfs4/HFIP/$ACCNR/$USER}
   STMP=${STMP:-$dprefix/RT_BASELINE}
   PTMP=${PTMP:-$dprefix/RT_RUNDIRS}

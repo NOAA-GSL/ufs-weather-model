@@ -278,6 +278,10 @@ fi
 
 WLCLK_dflt=30
 
+if [[ $MACHINE_ID = jet.* ]]; then
+  WLCLK_dflt=60
+fi
+
 export WLCLK=$WLCLK_dflt
 
 export_fv3 ()
