@@ -89,7 +89,7 @@ export IMFDEEPCNV=3
 export LSM=3
 export LSOIL_LSM=9
 export KICE=9
-export CU_GF_USE_AOD=.true.
+export GF_AEROIC=2
 
 export GWD_OPT=3
 export DO_UGWP_V0=.false.

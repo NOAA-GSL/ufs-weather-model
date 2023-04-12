@@ -107,6 +107,7 @@ deflate_level=1
 /
 
 &gfs_physics_nml
+  gf_aeroic = @[GF_AEROIC]
   sfclay_compute_flux = @[SFCLAY_COMPUTE_FLUX]
   fhzero       = @[FHZERO]
   h2o_phys     = .true.

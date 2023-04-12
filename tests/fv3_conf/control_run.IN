@@ -134,3 +134,7 @@ if [ $CPLCHM = .true. ]; then
   cp      ${PATHRT}/parm/gocart/*.rc .
   ln -sf  @[INPUTDATA_ROOT]/GOCART/ExtData .
 fi
+
+if [ $GF_AEROIC = 2 ]; then
+  cp    @[INPUTDATA_ROOT]/FV3_cu_gf/* INPUT/.
+fi

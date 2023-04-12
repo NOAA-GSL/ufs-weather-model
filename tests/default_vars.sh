@@ -936,6 +936,9 @@ export RAS=.false.
 export RANDOM_CLDS=.false.
 export CNVCLD=.true.
 
+# GF scheme aerosol data
+export GF_AEROIC=1 # 1 = off 2 = on
+
 # Aerosol convective scavenging
 export FSCAV_AERO="'*:0.0'"
 
