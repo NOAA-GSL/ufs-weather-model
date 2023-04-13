@@ -6,7 +6,7 @@
 
 export TEST_DESCR="Compare RAP control results with previous trunk version"
 
-export CNTL_DIR=rap_control
+export CNTL_DIR=rap_cu_gf_aod
 
 export LIST_FILES="sfcf000.nc \
                    sfcf009.nc \
