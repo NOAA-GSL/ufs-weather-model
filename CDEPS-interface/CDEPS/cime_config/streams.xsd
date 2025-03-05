@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <!-- ======================== -->
+  <!-- attributes -->
+  <!-- ======================== -->
+
+  <xs:attribute name="id"       type="xs:string"/>
+  <xs:attribute name="version"  type="xs:decimal"/>
+  <xs:attribute name="name"     type="xs:string"/>
+
+  <!-- ======================== -->
+  <!-- simple elements -->
+  <!-- ======================== -->
+
+  <xs:element name="taxmode"     type="xs:string"/>
+  <xs:element name="tintalgo"    type="xs:string"/>
+  <xs:element name="readmode"    type="xs:string"/>
+  <xs:element name="mapalgo"     type="xs:string"/>
+  <xs:element name="dtlimit"     type="xs:double"/>
+  <xs:element name="year_first"  type="xs:integer"/>
+  <xs:element name="year_last"   type="xs:integer"/>
+  <xs:element name="year_align"  type="xs:integer"/>
+  <xs:element name="offset"      type="xs:integer"/>
+  <xs:element name="vectors"     type="xs:string"/>
+  <xs:element name="meshfile"    type="xs:anyURI"/>
+  <xs:element name="lev_dimname" type="xs:string"/>
+  <xs:element name="var"         type="xs:string"/>
+
+  <!-- ======================== -->
+  <!-- complex elements -->
+  <!-- ======================== -->
+
+  <xs:element name="datafiles">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="file" type="xs:anyURI"  minOccurs="1" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="datavars">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="var" minOccurs="1" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="stream_info">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="taxmode"     />
+        <xs:element ref="tintalgo"    />
+        <xs:element ref="readmode"    />
+        <xs:element ref="mapalgo"     />
+        <xs:element ref="dtlimit"     />
+        <xs:element ref="year_first"   />
+        <xs:element ref="year_last"    />
+        <xs:element ref="year_align"   />
+        <xs:element ref="vectors"     />
+        <xs:element ref="meshfile"    />
+        <xs:element ref="lev_dimname" />
+        <xs:element ref="datafiles"   />
+        <xs:element ref="datavars"    />
+        <xs:element ref="offset"      />
+      </xs:sequence>
+      <xs:attribute ref="name" />
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="file">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="stream_info" maxOccurs="unbounded"/>
+      </xs:sequence>
+      <xs:attribute ref="id" />
+      <xs:attribute ref="version" />
+    </xs:complexType>
+  </xs:element>
+
+</xs:schema>

@@ -42,6 +42,7 @@ Please delete what is not needed.
   * MOM6 - 
   * NOAHMP - 
   * WW3 - 
+  * fire_behavior
   * stochastic_physics - 
 ```
 
@@ -89,6 +90,7 @@ Example:
 * MOM6:
 * NOAHMP:
 * WW3:
+* fire_behavior:
 * stochastic_physics:
 * None
 
@@ -144,7 +146,8 @@ Please delete what is not needed.
   - [ ] Orion
   - [ ] Hercules
   - [ ] Jet
-  - [ ] Gaea
+  - [ ] GaeaC5
+  - [ ] GaeaC6
   - [ ] Derecho
 - WCOSS2
   - [ ] Dogwood/Cactus

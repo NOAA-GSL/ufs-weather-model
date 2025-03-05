@@ -1,0 +1,223 @@
+<?xml version="1.0"?>
+
+<?xml-stylesheet type="text/xsl" href="namelist_definition.xsl"?>
+
+<entry_id version="2.0">
+
+  <!-- Values to use by default for creation of DOCN model docn namelists. -->
+
+  <entry id="streamslist">
+    <type>char(100)</type>
+    <category>streams</category>
+    <group>streams_file</group>
+    <desc>
+      List of streams for a given docn_mode value. Each docn_mode can
+      have zero or more streams that are associated with it.
+    </desc>
+    <values>
+      <value docn_mode="prescribed">prescribed</value>
+      <value docn_mode="interannual">interannual</value>
+      <value docn_mode="som_aquap">som_aquap</value>
+      <value docn_mode="som">som</value>
+      <value docn_mode="cplhist">cplhist</value>
+      <value docn_mode="sst_aquap_file">aquapfile</value>
+      <value docn_mode="sst_aquap_constant">''</value>
+      <value docn_mode="sst_aquap1">''</value>
+      <value docn_mode="sst_aquap2">''</value>
+      <value docn_mode="sst_aquap3">''</value>
+      <value docn_mode="sst_aquap4">''</value>
+      <value docn_mode="sst_aquap5">''</value>
+      <value docn_mode="sst_aquap6">''</value>
+      <value docn_mode="sst_aquap7">''</value>
+      <value docn_mode="sst_aquap8">''</value>
+      <value docn_mode="sst_aquap9">''</value>
+      <value docn_mode="sst_aquap10">''</value>
+      <value docn_mode="multilev_dom">sst_salinity_depth_blom,prescribed</value>
+      <value docn_mode="multilev">sst_salinity_depth_blom</value>
+    </values>
+  </entry>
+
+  <entry id="datamode">
+    <type>char</type>
+    <category>docn</category>
+    <group>docn_nml</group>
+    <valid_values>sstdata,sst_aquap1,sst_aquap2,sst_aquap3,sst_aquap4,sst_aquap5,sst_aquap6,sst_aquap7,sst_aquap8,sst_aquap9,sst_aquap10,sst_aquapfile,sst_aquap_constant,som,som_aquap,iaf,cplhist,multilev,multilev_dom</valid_values>
+    <desc>
+      General method that operates on the data for a given docn_mode.
+      ==> dataMode = "sstdata"
+      sstdata mode assumes the only field in the input stream is SST.
+      It also assumes the SST is in Celsius and must be converted to Kelvin.
+      All other fields are set to zero.
+      NOTE: Normally the ice fraction data is found in the same data files that
+      provide SST data to the data ocean model. They are normally found in
+      the same file because the SST and ice fraction data are derived from
+      the same observational data sets and are consistent with each other.
+      to the data ocean model. They are normally found in the same file
+      because the SST and ice fraction data are derived from the same
+      observational data sets and are consistent with each other.
+      ==> dataMode = "iaf"
+      iaf is the interannually varying version of sstdata
+      The ocean salinity is set to a constant reference salinity value.
+      All other fields other than SST and ocean salinity are set to zero.
+      ==> dataMode = "som"
+      som ("slab ocean model") mode is a prognostic mode.  This mode
+      computes a prognostic sea surface temperature and a freeze/melt
+      potential (surface Q-flux) used by the sea ice model.  This
+      calculation requires an external SOM forcing data file that includes
+      ocean mixed layer depths and bottom-of-the-slab Q-fluxes.
+      Scientifically appropriate bottom-of-the-slab Q-fluxes are normally
+      ocean resolution dependent and are derived from the ocean model output
+      of a fully coupled CCSM run.  Note that while this mode runs out of
+      the box, the default SOM forcing file is not scientifically
+      appropriate and is provided for testing and development purposes only.
+      Users must create scientifically appropriate data for their particular
+      application.  A tool is available to derive valid SOM forcing.
+
+      (1) map the xml variable DOCN_MODE => config variable docn_mode => namelist variable datamode
+        compset="_DOCN%DOM_"      => docn_mode=prescribed          => datamode=prescribed
+        compset="_DOCN%IAF_"      => docn_mode=interannual         => datamode=interannual
+        compset="_DOCN%SOM_"      => docn_mode=som                 => datamode=som
+        compset="_DOCN%SOMAQP_"   => docn_mode=som_aquap           => datamode=som_aquap
+        compset="_DOCN%AQP1_"     => docn_mode=sst_aquap1          => datamode=sst_aquap1
+        compset="_DOCN%AQP2_"     => docn_mode=sst_aquap2          => datamode=sst_aquap2
+        compset="_DOCN%AQP3_"     => docn_mode=sst_aquap3          => datamode=sst_aquap3
+        compset="_DOCN%AQP4_"     => docn_mode=sst_aquap4          => datamode=sst_aquap4
+        compset="_DOCN%AQP5_"     => docn_mode=sst_aquap5          => datamode=sst_aquap5
+        compset="_DOCN%AQP6_"     => docn_mode=sst_aquap6          => datamode=sst_aquap6
+        compset="_DOCN%AQP7_"     => docn_mode=sst_aquap7          => datamode=sst_aquap7
+        compset="_DOCN%AQP8_"     => docn_mode=sst_aquap8          => datamode=sst_aquap8
+        compset="_DOCN%AQP9_"     => docn_mode=sst_aquap9          => datamode=sst_aquap9
+        compset="_DOCN%AQP10_"    => docn_mode=sst_aquap10         => datamode=sst_aquap10
+        compset="_DOCN%AQPFILE_"  => docn_mode=sst_aquapfile       => datamode=sst_aquap_file
+        compset="_DOCN%AQPCONST_" => docn_mode=sst_aquap_constant  => datamode=sst_aquap_constant
+     </desc>
+    <values>
+      <value docn_mode="prescribed">sstdata</value>
+      <value docn_mode="som$">som</value>
+      <value docn_mode="som_aquap">som_aquap</value>
+      <value docn_mode="interannual">iaf</value>
+      <value docn_mode="sst_aquap1$">sst_aquap1</value>
+      <value docn_mode="sst_aquap2$">sst_aquap2</value>
+      <value docn_mode="sst_aquap3$">sst_aquap3</value>
+      <value docn_mode="sst_aquap4$">sst_aquap4</value>
+      <value docn_mode="sst_aquap5$">sst_aquap5</value>
+      <value docn_mode="sst_aquap6$">sst_aquap6</value>
+      <value docn_mode="sst_aquap7$">sst_aquap7</value>
+      <value docn_mode="sst_aquap8$">sst_aquap8</value>
+      <value docn_mode="sst_aquap9$">sst_aquap9</value>
+      <value docn_mode="sst_aquap10$">sst_aquap10</value>
+      <value docn_mode="sst_aquapfile$">sst_aquap_file</value>
+      <value docn_mode="sst_aquap_constant$">sst_aquap_constant</value>
+      <value docn_mode="cplhist">cplhist</value>
+      <value docn_mode="multilev_dom">multilev_dom</value>
+      <value docn_mode="multilev">multilev</value>
+    </values>
+  </entry>
+
+  <entry id="model_meshfile">
+    <type>char</type>
+    <category>streams</category>
+    <input_pathname>abs</input_pathname>
+    <group>docn_nml</group>
+    <desc>
+      file specifying model mesh
+    </desc>
+    <values>
+      <value>$OCN_DOMAIN_MESH</value>
+      <value single_column='true'>null</value>
+    </values>
+  </entry>
+
+  <entry id="model_maskfile">
+    <type>char</type>
+    <category>streams</category>
+    <input_pathname>abs</input_pathname>
+    <group>docn_nml</group>
+    <desc>
+      MESH for ocn mask
+    </desc>
+    <values>
+      <value>$MASK_MESH</value>
+      <value aqua_planet="true">$ATM_DOMAIN_MESH</value>
+      <value single_column='true'>null</value>
+    </values>
+  </entry>
+
+  <entry id="nx_global" modify_via_xml="OCN_NX">
+    <type>integer</type>
+    <category>streams</category>
+    <group>docn_nml</group>
+    <desc>
+      global size of nx
+    </desc>
+    <values>
+      <value>$OCN_NX</value>
+      <value single_column='true'>1</value>
+    </values>
+  </entry>
+
+  <entry id="ny_global" modify_via_xml="OCN_NY">
+    <type>integer</type>
+    <category>streams</category>
+    <group>docn_nml</group>
+    <desc>
+      global size of ny
+    </desc>
+    <values>
+      <value>$OCN_NY</value>
+      <value single_column='true'>1</value>
+    </values>
+  </entry>
+
+  <entry id="restfilm">
+    <type>char</type>
+    <category>docn</category>
+    <group>docn_nml</group>
+    <desc>
+      main restart file name for docn model
+    </desc>
+    <values>
+      <value>null</value>
+    </values>
+  </entry>
+
+  <entry id="sst_constant_value">
+    <type>real(30)</type>
+    <category>docn</category>
+    <group>docn_nml</group>
+    <desc>
+      Value of globally uniform SST (K) for idealized experiments
+      when data ocean mode is sst_aquap_constant
+    </desc>
+    <values>
+      <value>-1.0</value>
+      <value docn_mode='aquap_constant'>$DOCN_AQPCONST_VALUE</value>
+    </values>
+  </entry>
+
+  <entry id="skip_restart_read" modify_via_xml="DOCN_SKIP_RESTART_READ">
+    <type>logical</type>
+    <category>docn</category>
+    <group>docn_nml</group>
+    <desc>
+      If set to true, than docn restarts will not be read on a continuation run.
+      This capability is used, for example, in CTSM spinup runs.
+    </desc>
+    <values>
+      <value>$DOCN_SKIP_RESTART_READ</value>
+    </values>
+  </entry>
+
+  <entry id="import_data_fields" modify_via_xml="DOCN_IMPORT_FIELDS">
+    <type>char</type>
+    <category>docn</category>
+    <group>docn_nml</group>
+    <desc>
+      Colon delimited set of fields to advertise as import data
+    </desc>
+    <values>
+      <value>$DOCN_IMPORT_FIELDS</value>
+    </values>
+  </entry>
+
+</entry_id>

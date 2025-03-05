@@ -17,12 +17,16 @@ cleanup() {
 
 write_fail_test() {
   echo "${TEST_ID} failed in run_test" >> "${PATHRT}/fail_test_${TEST_ID}"
-  exit 1
-}
-
-remove_fail_test() {
-    echo "Removing test failure flag file for ${TEST_ID}"
-    rm -f "${PATHRT}/fail_test_${TEST_ID}"
+  if [[ ${ROCOTO:-false} == true ]] || [[ ${ECFLOW:-false} == true ]]; then
+    # if this script has been submitted by a workflow return non-zero exit status
+    # so that workflow can resubmit it
+    exit 1
+  else
+    # if this script has been executed interactively, return zero exit status
+    # so that rt.sh can continue running, and hope that rt.sh's generate_log
+    # will catch failed tests
+    exit 0
+  fi
 }
 
 if [[ $# != 5 ]]; then
@@ -53,7 +57,7 @@ source default_vars.sh
 [[ -e ${RUNDIR_ROOT}/run_test_${TEST_ID}.env ]] && source "${RUNDIR_ROOT}/run_test_${TEST_ID}.env"
 source "tests/${TEST_NAME}"
 
-remove_fail_test
+rm -f "${PATHRT}/fail_test_${TEST_ID}"
 
 # Save original CNTL_DIR name as INPUT_DIR for regression
 # tests that try to copy input data from CNTL_DIR
@@ -112,10 +116,18 @@ case ${MACHINE_ID} in
   stampede|expanse|noaacloud)
     echo "No special nccmp load necessary"
     ;;
-  gaea)
-    module use modulefiles
-    module load modules.fv3
-    module load gcc/12.2.0
+  gaeac5)
+    module use /ncrc/proj/epic/spack-stack/spack-stack-1.6.0/envs/unified-env/install/modulefiles/Core
+    module load stack-intel/2023.2.0 stack-cray-mpich/8.1.28
+    module load nccmp/1.9.0.1
+    ;;
+  gaeac6)
+    module use /ncrc/proj/epic/spack-stack/c6/spack-stack-1.6.0/envs/fms-2024.01/install/modulefiles/Core
+    module load stack-intel/2023.2.0 stack-cray-mpich/8.1.29
+    module load nccmp/1.9.0.1
+    #module use modulefiles
+    #module load modules.fv3
+    #module load gcc-native/12.3
     ;;
   derecho)
     module load nccmp
@@ -159,10 +171,19 @@ else
   exit 1
 fi
 
-compute_petbounds_and_tasks
+if [[ ${ESMF_THREADING} == true ]]; then
+  compute_petbounds_and_tasks_esmf_threading
+else
+  compute_petbounds_and_tasks_traditional_threading
+fi
 
 if [[ -f ${PATHRT}/parm/${UFS_CONFIGURE} ]]; then
-  atparse < "${PATHRT}/parm/${UFS_CONFIGURE}" > ufs.configure
+  (
+    atparse < "${PATHRT}/parm/${UFS_CONFIGURE}" > ufs.configure
+    if [[ ${ESMF_THREADING} != true ]]; then
+       sed -i -e "/_omp_num_threads:/d" ufs.configure
+    fi
+  )
 else
   echo "Cannot find file ${UFS_CONFIGURE} set by variable UFS_CONFIGURE"
   exit 1
@@ -298,6 +319,11 @@ if [[ "${DIAG_TABLE_ADDITIONAL:-}Q" != Q ]]; then
   atparse < "${PATHRT}/parm/diag_table/${DIAG_TABLE_ADDITIONAL:-}" >> diag_table
 fi
 
+if [[ "${FIELD_TABLE_ADDITIONAL:-}Q" != Q ]] ; then
+    # Append field table
+    atparse < "${PATHRT}/parm/field_table/${FIELD_TABLE_ADDITIONAL:-}" >> field_table
+fi
+
 # ATMAERO
 if [[ ${CPLCHM} == .true. ]] && [[ ${S2S} = 'false' ]]; then
   atparse < "${PATHRT}/parm/diag_table/${DIAG_TABLE:-diag_table_template}" > diag_table
@@ -326,6 +352,26 @@ if [[ ${CDEPS_INLINE} = 'true' ]]; then
   atparse < "${PATHRT}/parm/${CDEPS_INLINE_CONFIGURE:-stream.config.IN}" > stream.config
 fi
 
+if [[ ${FIRE_BEHAVIOR} = 'true' ]]; then
+  atparse < "${PATHRT}/parm/${FIRE_NML:-namelist.fire.IN}" > namelist.fire
+fi
+
+#Namelists generated and variable definitions are finalized
+#Sanity check for timesteps on ATM/OCN/ICE
+if [[ -n "${DT_CICE+x}" ]]; then
+  if [[ ${DT_ATMOS} -ne ${DT_CICE} ]]; then
+    echo "Atmosphere timestep (DT_ATMOS) should be equal to CICE timestep (DT_CICE). Exiting"
+    exit 1
+  fi
+fi
+if [[ -n "${coupling_interval_slow_sec+x}" && -n "${coupling_interval_fast_sec+x}" ]]; then
+  if [[ $(( coupling_interval_slow_sec % coupling_interval_fast_sec)) -ne 0 ]]; then
+    echo "The slow coupling timestep (coupling_interval_slow_sec) should be divisible by"
+    echo "the fast coupling timestep (coupling_interval_fast_sec). Exiting"
+    exit 1
+  fi
+fi
+
 TPN=$(( TPN / THRD ))
 if (( TASKS < TPN )); then
   TPN=${TASKS}
@@ -348,6 +394,10 @@ if (( UFS_TASKS - ( PPN * NODES ) > 0 )); then
 fi
 export PPN
 export UFS_TASKS
+
+if [[ ${ESMF_THREADING} != true ]]; then
+  PPN=${TPN}
+fi
 
 if [[ ${SCHEDULER} = 'pbs' ]]; then
   if [[ -e ${PATHRT}/fv3_conf/fv3_qsub.IN_${MACHINE_ID} ]]; then
@@ -396,11 +446,123 @@ else
 
 fi
 skip_check_results=${skip_check_results:-false}
-results_okay=YES
-if [[ ${skip_check_results} = false ]]; then
-  if ( ! check_results ) ; then
-    results_okay=NO
+if [[ ${skip_check_results} == false ]]; then
+
+  test_status='PASS'
+
+  {
+  echo
+  echo "baseline dir = ${RTPWD}/${CNTL_DIR}_${RT_COMPILER}"
+  echo "working dir  = ${RUNDIR}"
+  echo "Checking test ${TEST_ID} results ...."
+  } > "${RT_LOG}"
+  echo
+  echo "baseline dir = ${RTPWD}/${CNTL_DIR}_${RT_COMPILER}"
+  echo "working dir  = ${RUNDIR}"
+  echo "Checking test ${TEST_ID} results ...."
+
+  if [[ ${CREATE_BASELINE} = false ]]; then
+    #
+    # --- regression test comparison
+    #
+    for i in ${LIST_FILES} ; do
+      printf %s " Comparing ${i} ....." >> "${RT_LOG}"
+      printf %s " Comparing ${i} ....."
+
+      if [[ ! -f ${RUNDIR}/${i} ]] ; then
+
+        echo ".......MISSING file" >> "${RT_LOG}"
+        echo ".......MISSING file"
+        test_status='FAIL'
+
+      elif [[ ! -f ${RTPWD}/${CNTL_DIR}_${RT_COMPILER}/${i} ]] ; then
+
+        echo ".......MISSING baseline" >> "${RT_LOG}"
+        echo ".......MISSING baseline"
+        test_status='FAIL'
+
+      else
+        if [[ ${i##*.} == nc* ]] ; then
+          if [[ " orion hercules hera wcoss2 acorn derecho gaeac5 gaeac6 jet s4 noaacloud " =~ ${MACHINE_ID} ]]; then
+            printf "USING NCCMP.." >> "${RT_LOG}"
+            printf "USING NCCMP.."
+              if [[ ${CMP_DATAONLY} == false ]]; then
+                nccmp -d -S -q -f -g -B --Attribute=checksum --warn=format "${RTPWD}/${CNTL_DIR}_${RT_COMPILER}/${i}" "${RUNDIR}/${i}" > "${i}_nccmp.log" 2>&1 && d=$? || d=$?
+              else
+                nccmp -d -S -q -f -B --Attribute=checksum --warn=format "${RTPWD}/${CNTL_DIR}_${RT_COMPILER}/${i}" "${RUNDIR}/${i}" > "${i}_nccmp.log" 2>&1 && d=$? || d=$?
+              fi
+              if [[ ${d} -ne 0 && ${d} -ne 1 ]]; then
+                printf "....ERROR" >> "${RT_LOG}"
+                printf "....ERROR"
+                test_status='FAIL'
+              fi
+          fi
+        else
+          printf "USING CMP.." >> "${RT_LOG}"
+          printf "USING CMP.."
+          cmp "${RTPWD}/${CNTL_DIR}_${RT_COMPILER}/${i}" "${RUNDIR}/${i}" >/dev/null 2>&1 && d=$? || d=$?
+          if [[ ${d} -eq 2 ]]; then
+            printf "....ERROR" >> "${RT_LOG}"
+            printf "....ERROR"
+            test_status='FAIL'
+          fi
+
+        fi
+
+        if [[ ${d} -ne 0 ]]; then
+          echo "....NOT IDENTICAL" >> "${RT_LOG}"
+          echo "....NOT IDENTICAL"
+          test_status='FAIL'
+        else
+          echo "....OK" >> "${RT_LOG}"
+          echo "....OK"
+        fi
+
+      fi
+
+    done
+
+  else
+    #
+    # --- create baselines
+    #
+    echo;echo "Moving baseline ${TEST_ID} files ...."
+    echo;echo "Moving baseline ${TEST_ID} files ...." >> "${RT_LOG}"
+
+    for i in ${LIST_FILES} ; do
+      printf %s " Moving ${i} ....."
+      printf %s " Moving ${i} ....."   >> "${RT_LOG}"
+      if [[ -f ${RUNDIR}/${i} ]] ; then
+        mkdir -p "${NEW_BASELINE}/${CNTL_DIR}_${RT_COMPILER}/$(dirname "${i}")"
+        cp "${RUNDIR}/${i}" "${NEW_BASELINE}/${CNTL_DIR}_${RT_COMPILER}/${i}"
+        echo "....OK" >> "${RT_LOG}"
+        echo "....OK"
+      else
+        echo "....NOT OK. Missing ${RUNDIR}/${i}" >> "${RT_LOG}"
+        echo "....NOT OK. Missing ${RUNDIR}/${i}"
+        test_status='FAIL'
+      fi
+    done
+
   fi
+
+  {
+  echo
+  grep "The total amount of wall time" "${RUNDIR}/out"
+  grep "The maximum resident set size" "${RUNDIR}/out"
+  echo
+  echo "Test ${TEST_ID} ${test_status}"
+  echo
+  } >> "${RT_LOG}"
+
+  echo "Test ${TEST_ID} ${test_status}"
+  echo
+
+  if [[ ${test_status} = 'FAIL' ]]; then
+    echo "${TEST_ID} failed in check_result" >> "${PATHRT}/fail_test_${TEST_ID}"
+    write_fail_test
+  fi
+
 else
   {
   echo
@@ -408,16 +570,12 @@ else
   grep "The maximum resident set size" "${RUNDIR}/out"
   echo
   echo "Test ${TEST_ID} RUN_SUCCESS"
-  echo;echo;echo                                     
+  echo;echo;echo
   } >> "${RT_LOG}"
 fi
 
 if [[ ${SCHEDULER} != 'none' ]]; then
   cat "${RUNDIR}/job_timestamp.txt" >> "${LOG_DIR}/${JBNME}_timestamp.txt"
-fi
-
-if [[ ${results_okay} == YES ]]; then
-  remove_fail_test
 fi
 
 ################################################################################
